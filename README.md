@@ -2,7 +2,7 @@
 ![image](https://github.com/SnowScriptWinterOfCode/Technical_Writing/assets/97171261/ccfc3002-55b5-4109-970b-9d675b4a6043)
 
 ## Maintainers
-@anushreebasics @vanivaranya
+@Anushreebasics @vanivaranya
 
 ## Mentors
 @vaniasetia @trisha-tomy @dwiti28 @joyetaahuja
