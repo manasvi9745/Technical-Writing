@@ -5,7 +5,7 @@
 @anushreebasics @vanivaranya
 
 ## Mentors
-@joyetaahuja @trisha-tomy @dwiti28 @vaniasetia
+@vaniasetia @trisha-tomy @dwiti28 @joyetaahuja
 
 Please reach out to the maintainers if you get stuck or wish to report someone.
 
