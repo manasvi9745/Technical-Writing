@@ -32,6 +32,17 @@ Welcome to our technical writing repository! This project aims to create compreh
 
 7. Create a Pull Request: Open a pull request from your branch to our main repository. Ensure your pull request includes details about the changes made.
 
+## Steps to Get Started:
+
+1. **Browse Projects**: Go through the projects listed on our website or GitHub repository and find one you feel comfortable contributing to.
+2. **Explore Issues**: Look at the existing issues of your selected project and find one that interests you. Alternatively, you can create issues on your own.
+3. **Tag Maintainers**: Tag repository maintainers (mentioned in the README) if you encounter any problems.
+4. **Get Issue Assigned**: Wait for the issue to be assigned to you before starting your work.
+5. **Fork the Repository**: Create a branch for the issue you’re working on.
+6. **Submit Your Work**: Create a Pull Request (PR), **mentioning the issue number and the changes made by you**. It will be promptly reviewed, and suggestions will be provided if needed.
+7. **Add Screenshots**: Attach screenshots to your PR to demonstrate your contribution.
+8. **Follow Repository Guidelines**: Each repository's README contains specific contribution guidelines.
+
 # Contribution Guidelines
 
 We welcome contributions from the community to enhance and maintain our technical documentation. Please adhere to the following guidelines:
