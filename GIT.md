@@ -13,26 +13,26 @@ What is Git? Why is it used in software development projects?
 ### For Windows OS
 1. Go to the official Git website: https://git-scm.com/download/win.
 The download should start automatically. If not, click on the link for your version (32-bit or 64-bit).
-3. Run the downloaded installer and follow the on-screen instructions.
-4. Choose the default settings or customize the installation according to your preferences.
-5. After installation, open Command Prompt and verify the installation by typing:\
+2. Run the downloaded installer and follow the on-screen instructions.
+3. Choose the default settings or customize the installation according to your preferences.
+4. After installation, open Command Prompt and verify the installation by typing:\
    `git --version`.
 
 ### For macOS:
-1. Install via Homebrew: If Homebrew is installed, run:
-   \ `brew install git`.
+1. Install via Homebrew: If Homebrew is installed, run:\
+    `brew install git`.
 
 Alternatively, download the .dmg installer from https://git-scm.com/ and follow the on-screen instructions.
 
-After installation, open Terminal and verify the installation by typing:
-  \ `git --version`.
+After installation, open Terminal and verify the installation by typing:\
+  `git --version`.
 
 
 
 ### For Linux OS:
 For Ubuntu/Debian:
-``` bash sudo apt-get update```
-\ ```sudo apt-get install git```
+``` bash sudo apt-get update```\
+```sudo apt-get install git```
 
 For Fedora:
 `sudo dnf install git`
