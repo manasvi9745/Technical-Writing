@@ -34,10 +34,10 @@ For Ubuntu/Debian:\
 ``` bash sudo apt-get update```\
 ```sudo apt-get install git```
 
-For Fedora:
+For Fedora:\
 `sudo dnf install git`
 
-Verify by running:
+Verify by running:\
 `bashgit --version` on the terminal.
 
 ## Configuring Git
