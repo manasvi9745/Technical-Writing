@@ -16,23 +16,23 @@ The download should start automatically. If not, click on the link for your vers
 3. Run the downloaded installer and follow the on-screen instructions.
 4. Choose the default settings or customize the installation according to your preferences.
 5. After installation, open Command Prompt and verify the installation by typing:
-   `git --version`.
+   \ `git --version`.
 
 ### For macOS:
 1. Install via Homebrew: If Homebrew is installed, run:
-   `brew install git`.
+   \ `brew install git`.
 
 Alternatively, download the .dmg installer from https://git-scm.com/ and follow the on-screen instructions.
 
 After installation, open Terminal and verify the installation by typing:
-   `git --version`.
+  \ `git --version`.
 
 
 
 ### For Linux OS:
 For Ubuntu/Debian:
 ``` bash sudo apt-get update```
-```sudo apt-get install git```
+\ ```sudo apt-get install git```
 
 For Fedora:
 `sudo dnf install git`
