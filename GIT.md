@@ -24,8 +24,10 @@ The download should start automatically. If not, click on the link for your vers
 
 Alternatively, download the .dmg installer from (git-scm.com) and follow the on-screen instructions.
 
-Verify the installation with:
-`git --version`
+After installation, open Terminal and verify the installation by typing:
+   `git --version`
+
+
 
 ### For Linux OS:
 For Ubuntu/Debian:
