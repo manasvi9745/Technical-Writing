@@ -31,14 +31,14 @@ After installation, open Terminal and verify the installation by typing:
 
 ### For Linux OS:
 For Ubuntu/Debian:
-``` bash sudo apt-get update sudo apt-get install git```
+``` bash sudo apt-get update```
+```sudo apt-get install git```
 
 For Fedora:
 `sudo dnf install git`
 
 Verify by running:
-`bashgit --version`
-
+`bashgit --version` on the terminal
 
 ## Configuring Git
 
