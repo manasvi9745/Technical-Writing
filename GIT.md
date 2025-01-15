@@ -11,34 +11,51 @@ What is Git? Why is it used in software development projects?
 
 
 ### For Windows OS
-1. Go to the official Git website: https://git-scm.com/download/win.
-The download should start automatically. If not, click on the link for your version (32-bit or 64-bit).
-2. Run the downloaded installer and follow the on-screen instructions.
-3. Choose the default settings or customize the installation according to your preferences.
-4. After installation, open Command Prompt and verify the installation by typing:\
+1. Visit the official Git website at [https://git-scm.com/download/win](https://git-scm.com/download/win).  
+   The download should begin automatically. If it doesn't, click on the appropriate link for your system (32-bit or 64-bit).
+
+2. Launch the downloaded installer and follow the instructions provided.
+
+3. Select the default options or modify the installation settings based on your preferences.
+
+4. Once the installation is complete, open Command Prompt and confirm the installation by entering:  
    `git --version`.
 
 ### For macOS:
-1. Install via Homebrew: If Homebrew is installed, run:\
-    `brew install git`.
+  1. **Install using Homebrew**: If you already have Homebrew installed, run the following command:  
+   `brew install git`.
 
-Alternatively, download the .dmg installer from https://git-scm.com/ and follow the on-screen instructions.
+2. **If Homebrew is not installed**: To install Homebrew, open Terminal and run the following command:  
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+   Once Homebrew is installed, proceed with the command:  
+   `brew install git`.
 
-After installation, open Terminal and verify the installation by typing:\
-  `git --version`.
+3. **Alternative method**: If you prefer, download the `.dmg` installer from [Git's official website](https://git-scm.com/) and follow the on-screen instructions.
+
+4. **Verify the installation**: After the installation is complete, open Terminal and check the Git version by typing:  
+   `git --version`.
 
 
 
 ### For Linux OS:
-For Ubuntu/Debian:\
-``` bash sudo apt-get update```\
-```sudo apt-get install git```
+For Ubuntu/Debian:  
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
 
-For Fedora:\
-`sudo dnf install git`
+For Fedora:  
+```bash
+sudo dnf install git
+```
 
-Verify by running:\
-`bashgit --version` on the terminal.
+**Verify the installation**:  
+After installation, open the terminal and check the Git version by running:  
+```bash
+git --version
+```
 
 ## Configuring Git
 
