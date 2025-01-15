@@ -7,14 +7,37 @@ This document provides an overview of Git, including installation instructions, 
 What is Git? Why is it used in software development projects?
 **answer the above questions**
 
-## Installing Git
+## Installing Git on different operating systems
 
 
 ### Windows
-
-1. Download the Git installer for Windows from the official website: [Git for Windows](https://gitforwindows.org/).
+1. Download Git
+Go to the official Git website: https://git-scm.com/download/win
+The download should start automatically. If not, click on the link for your version (32-bit or 64-bit).
 2. Run the downloaded installer and follow the on-screen instructions.
 3. Choose the default settings or customize the installation according to your preferences.
+4. After installation, open Command Prompt and verify the installation by typing:
+`git --version`
+
+### macOS:
+Install via Homebrew: If Homebrew is installed, run:
+`brew install git`
+
+Alternatively, download the .dmg installer from (git-scm.com) and follow the on-screen instructions.
+
+Verify the installation with:
+`git --version`
+
+## Linux:
+For Ubuntu/Debian:
+`sudo apt-get update`
+`sudo apt-get install git`
+
+For Fedora:
+`sudo dnf install git`
+
+Verify by running:
+```bashgit --version`
 
 
 ## Configuring Git
