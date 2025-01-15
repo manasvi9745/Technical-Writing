@@ -7,7 +7,7 @@ This document provides an overview of Git, including installation instructions, 
 What is Git? Why is it used in software development projects?
 **answer the above questions**
 
-## Installing Git on different operating systems
+## Installing Git
 
 
 ### Windows
