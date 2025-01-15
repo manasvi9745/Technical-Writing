@@ -30,7 +30,7 @@ After installation, open Terminal and verify the installation by typing:\
 
 
 ### For Linux OS:
-For Ubuntu/Debian:
+For Ubuntu/Debian:\
 ``` bash sudo apt-get update```\
 ```sudo apt-get install git```
 
