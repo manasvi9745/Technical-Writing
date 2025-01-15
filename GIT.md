@@ -22,7 +22,7 @@ The download should start automatically. If not, click on the link for your vers
 1. Install via Homebrew: If Homebrew is installed, run:
    `brew install git`
 
-Alternatively, download the .dmg installer from (git-scm.com) and follow the on-screen instructions.
+Alternatively, download the .dmg installer from git-scm.com and follow the on-screen instructions.
 
 After installation, open Terminal and verify the installation by typing:
    `git --version`
@@ -31,8 +31,8 @@ After installation, open Terminal and verify the installation by typing:
 
 ### For Linux OS:
 For Ubuntu/Debian:
-`sudo apt-get update`
-`sudo apt-get install git`
+```sudo apt-get update
+sudo apt-get install git```
 
 For Fedora:
 `sudo dnf install git`
