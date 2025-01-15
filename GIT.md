@@ -15,8 +15,8 @@ What is Git? Why is it used in software development projects?
 The download should start automatically. If not, click on the link for your version (32-bit or 64-bit).
 3. Run the downloaded installer and follow the on-screen instructions.
 4. Choose the default settings or customize the installation according to your preferences.
-5. After installation, open Command Prompt and verify the installation by typing:
-   \ `git --version`.
+5. After installation, open Command Prompt and verify the installation by typing:\
+   `git --version`.
 
 ### For macOS:
 1. Install via Homebrew: If Homebrew is installed, run:
