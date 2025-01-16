@@ -14,23 +14,23 @@ Be clear about what is needed. If the prompt is vague, the output is also effect
 #### Context
 Provide the model with enough background information to understand your need.
 
-####Break into steps
+#### Break into steps
 Rather than entering one big instruction, break down the complex task into smaller instructions.
 
-####Use of examples
+#### Use of examples
 Provide examples in your input to guide the model.
 
-###Role in Optimising Language Model Interactions
-####Improved performance
+### Role in Optimising Language Model Interactions
+#### Improved performance
 Well structured prompts significantly impact the performance of AI models. It provides a proper guidance to the model thus resulting in better accuracy and output.
 
-####Customization
+#### Customization
 It helps the users to frame their instructions specific to their task and needs. Users can customise their prompts giving them more personalization.
 
-####Increased Efficiency
+#### Increased Efficiency
 It helps reducing the time which is spent on perfoming a task by streamlining the conversation in more structured way.
 
-####Improved Decision Making
+#### Improved Decision Making
 It enables the users to obtain relevant information and make informed decisions utilising that.
 
 ## How does it work?
