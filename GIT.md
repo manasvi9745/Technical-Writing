@@ -10,12 +10,52 @@ What is Git? Why is it used in software development projects?
 ## Installing Git
 
 
-### Windows
+### For Windows OS
+1. Visit the official Git website at [https://git-scm.com/download/win](https://git-scm.com/download/win).  
+   The download should begin automatically. If it doesn't, click on the appropriate link for your system (32-bit or 64-bit).
 
-1. Download the Git installer for Windows from the official website: [Git for Windows](https://gitforwindows.org/).
-2. Run the downloaded installer and follow the on-screen instructions.
-3. Choose the default settings or customize the installation according to your preferences.
+2. Launch the downloaded installer and follow the instructions provided.
 
+3. Select the default options or modify the installation settings based on your preferences.
+
+4. Once the installation is complete, open Command Prompt and confirm the installation by entering:  
+   `git --version`.
+
+### For macOS:
+  1. **Install using Homebrew**: If you already have Homebrew installed, run the following command:  
+   `brew install git`.
+
+2. **If Homebrew is not installed**: To install Homebrew, open Terminal and run the following command:  
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+   Once Homebrew is installed, proceed with the command:  
+   `brew install git`.
+
+3. **Alternative method**: If you prefer, download the `.dmg` installer from [Git's official website](https://git-scm.com/) and follow the on-screen instructions.
+
+4. **Verify the installation**: After the installation is complete, open Terminal and check the Git version by typing:  
+   `git --version`.
+
+
+
+### For Linux OS:
+For Ubuntu/Debian:  
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+
+For Fedora:  
+```bash
+sudo dnf install git
+```
+
+**Verify the installation**:  
+After installation, open the terminal and check the Git version by running:  
+```bash
+git --version
+```
 
 ## Configuring Git
 
