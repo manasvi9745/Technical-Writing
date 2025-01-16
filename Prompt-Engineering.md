@@ -21,16 +21,16 @@ Rather than entering one big instruction, break down the complex task into small
 Provide examples in your input to guide the model.
 
 ### Role in Optimising Language Model Interactions
-####1. Improved performance
+#### 1. Improved performance
 Well structured prompts significantly impact the performance of AI models by providing proper guidance to the model thus leading to better accuracy and responses.
 
-####2. Customization & Personalization
+#### 2. Customization & Personalization
 It helps the users to frame their instructions specific to their task and needs. Users can customise their prompts enabling a more personalized AI interaction.
 
-####3. Increased Efficiency
+#### 3. Increased Efficiency
 Structured interactions help in reducing the time which is spent on perfoming a task by streamlining the conversations.
 
-####4. Improved Decision Making
+#### 4. Improved Decision Making
 It enables the users to obtain relevant information and insights, helping in making informed and data-driven decisions.
 
 ## How does it work?
