@@ -2,6 +2,8 @@
 
 ## What is it?
 <!--Explain the fundamentals of prompt engineering and its significance in optimizing language model interactions.-->
+In today's modern world, Artificial Intelligence(AI) is increasingly being used to assist a wide range of tasks, from content creation to problem solving. In every possible field we can think of, we find AI being used. As AI models have become an integral part of our lives, the ability to effectively interact with them becomes crucial. This is where we start the discussion of Prompt Engineering.
+
 The practice of designing and improving input text(prompt) which is entered to guide Large Language Models (LLM's) such as ChatGPT for producing desired output is termed as Prompt Engineering. It is all about structuring the instructions to get best possible output. In this, queries are structured in a way that maximizes the model's efficiency, performance and makes the conversation more meaningful.
 
 ### What is a Prompt?
