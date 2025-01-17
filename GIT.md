@@ -131,53 +131,165 @@ View the commit history of the repository:
 git log
 ```
 ## Other git commands
-For the given commands, explain what they do and how they are used in a project:
+---
 
-### 1. git pull  
-Fetches updates from the remote repository and merges them into your current branch. It keeps your local repository up-to-date with the latest changes from others.
+#### **1. `git pull`**
+- **Description:** Fetches updates from the remote repository and merges them into your current branch. Keeps your local repository in sync with others.
+- **Example:**
+  ```bash
+  git pull origin main
+  ```
+- **Scenario:** Your teammates pushed new changes to the `main` branch, and you want to update your local `main` branch with their work.
 
-### 2. git push  
-Uploads changes from your local branch to the remote repository, allowing others to access your updates.
+---
 
-### 3. git branch  
-Lists existing branches, creates new branches, or deletes branches. It is used to manage different lines of development in a project.
+#### **2. `git push`**
+- **Description:** Uploads local changes to the remote repository, sharing your updates with collaborators.
+- **Example:**
+  ```bash
+  git push origin feature-branch
+  ```
+- **Scenario:** You've finished working on a feature branch and want to make it available for code review.
 
-### 4. git checkout  
-Switches to another branch or a specific commit. It is used to work on a different part of the project or review an earlier state.
+---
 
-### 5. git merge  
-Combines changes from one branch into the current branch. It is commonly used to integrate feature branches back into the main branch.
+#### **3. `git branch`**
+- **Description:** Lists, creates, or deletes branches to manage separate lines of development.
+- **Example:**
+  ```bash
+  git branch feature-login
+  ```
+- **Scenario:** You’re starting work on a new feature and want to isolate changes in a dedicated branch.
 
-### 6. git rebase  
-Reapplies commits from your branch onto another branch, creating a cleaner, linear project history. It is useful for integrating changes without unnecessary merge commits.
+---
 
-### 7. git log  
-Displays the commit history, showing details like author, date, and changes. It helps track what changes were made and when.
+#### **4. `git checkout`**
+- **Description:** Switches to another branch or restores a specific commit.
+- **Example:**
+  ```bash
+  git checkout main
+  git checkout a1b2c3d
+  ```
+- **Scenario:** Switch to the `main` branch to test the latest stable code or check the state of the project at a past commit.
 
-### 8. git reset  
-Resets the index and working directory to a previous commit, undoing changes. It is used to fix mistakes or undo commits.
+---
 
-### 9. git tag  
-Marks a specific commit with a label, typically used for releases or significant milestones.
+#### **5. `git merge`**
+- **Description:** Combines changes from one branch into the current branch.
+- **Example:**
+  ```bash
+  git merge feature-login
+  ```
+- **Scenario:** Your `feature-login` branch is complete, and you want to integrate it into the `main` branch.
 
-### 10. git stash  
-Temporarily saves uncommitted changes without committing them. It is helpful when you need to switch branches but want to save ongoing work.
+---
 
-### 11. git fetch  
-Downloads changes from the remote repository without merging them. It allows you to inspect updates before applying them.
+#### **6. `git rebase`**
+- **Description:** Reapplies commits from one branch onto another, creating a linear history.
+- **Example:**
+  ```bash
+  git checkout feature-login
+  git rebase main
+  ```
+- **Scenario:** Sync your `feature-login` branch with the latest changes from the `main` branch without introducing a merge commit.
 
-### 12. git remote  
-Manages remote repository connections. It is used to add, remove, or view remote repositories.
+---
 
-### 13. git diff  
-Shows differences between commits, branches, or the working directory. It helps review changes before committing or merging.
+#### **7. `git log`**
+- **Description:** Displays the commit history with details like author, date, and changes.
+- **Example:**
+  ```bash
+  git log --oneline --graph
+  ```
+- **Scenario:** Review the commit history to understand changes made by the team.
 
-### 14. git blame  
-Displays the last modification for each line in a file, showing who made changes and when. It is useful for debugging or reviewing contributions.
+---
 
-### 15. git cherry-pick  
-Applies a specific commit from one branch to another. It allows selective integration of changes without merging the entire branch.
-## Branching Strategies
+#### **8. `git reset`**
+- **Description:** Resets the repository to a previous state, undoing changes.
+- **Example:**
+  ```bash
+  git reset --soft HEAD~1  # Undo last commit but keep changes staged
+  git reset --hard HEAD~1  # Undo last commit and discard changes
+  ```
+- **Scenario:** Fix a mistake in the last commit or remove unwanted changes completely.
+
+---
+
+#### **9. `git tag`**
+- **Description:** Marks specific commits with labels for significant milestones or releases.
+- **Example:**
+  ```bash
+  git tag -a v1.0 -m "Version 1.0 Release"
+  git push origin v1.0
+  ```
+- **Scenario:** Label the commit representing your first stable release.
+
+---
+
+#### **10. `git stash`**
+- **Description:** Temporarily saves uncommitted changes to switch contexts.
+- **Example:**
+  ```bash
+  git stash
+  git checkout main
+  git stash pop
+  ```
+- **Scenario:** Save incomplete work on a feature to fix a bug on another branch.
+
+---
+
+#### **11. `git fetch`**
+- **Description:** Downloads changes from the remote repository without merging them into your branch.
+- **Example:**
+  ```bash
+  git fetch origin
+  ```
+- **Scenario:** Check for updates on the remote repository without affecting your working branch.
+
+---
+
+#### **12. `git remote`**
+- **Description:** Manages remote repository connections.
+- **Example:**
+  ```bash
+  git remote add origin https://github.com/user/repo.git
+  git remote -v
+  ```
+- **Scenario:** Add a new remote repository or verify existing remotes.
+
+---
+
+#### **13. `git diff`**
+- **Description:** Shows differences between commits, branches, or the working directory.
+- **Example:**
+  ```bash
+  git diff main feature-branch
+  git diff HEAD
+  ```
+- **Scenario:** Compare changes in your working directory with the last commit or between branches.
+
+---
+
+#### **14. `git blame`**
+- **Description:** Displays the last modification for each line in a file.
+- **Example:**
+  ```bash
+  git blame app.js
+  ```
+- **Scenario:** Identify who last modified a specific line of code for debugging or accountability.
+
+---
+
+#### **15. `git cherry-pick`**
+- **Description:** Applies a specific commit from one branch to another.
+- **Example:**
+  ```bash
+  git cherry-pick a1b2c3d
+  ```
+- **Scenario:** Integrate a bug fix from one branch into another without merging unrelated changes.
+
+
 
 Define the branching strategies used in your project, such as feature branching, release branching, or GitFlow. Explain how branches are created, merged, and deleted in your workflow, Give examples of common branching commands.
 
