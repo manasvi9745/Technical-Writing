@@ -9,7 +9,7 @@ A Prompt is a detailed text in natural language given to a model to get desired 
 
 This process can be visualised as-
 
-<!--![image alt]()-->
+![Image](https://github.com/user-attachments/assets/778d4987-f4ad-4feb-acbc-a4a15e560f08)
 
 ### Fundamentals of Prompt Engineering
 The quality of the prompt directly affects the quality of the response. Hence, there are a few fundamentals need to be followed while interacting with a model.
