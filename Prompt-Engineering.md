@@ -2,23 +2,32 @@
 
 ## What is it?
 <!--Explain the fundamentals of prompt engineering and its significance in optimizing language model interactions.-->
-The practice of designing and improving inputs which are entered to guide AI models such as ChatGPT for producing desired output is termed as Prompt Engineering. It is all about structuring the instructions to get best possible output from LLM's (Large Language Models). In this, queries are structured in a way that maximises the model's efficiency, performance and makes the conversation more meaningful.
+The practice of designing and improving input text(prompt) which is entered to guide Large Language Models (LLM's) such as ChatGPT for producing desired output is termed as Prompt Engineering. It is all about structuring the instructions to get best possible output. In this, queries are structured in a way that maximises the model's efficiency, performance and makes the conversation more meaningful.
 
-### What are prompts?
-Prompts are detailed texts in natural language given to a model to get desired or expected output. It is an interaction between a user and an AI model. 
+### What is a prompt?
+A Prompt is a detailed text in natural language given to a model to get desired or expected output. It is an interaction between a user and an AI model. 
+
+This process can be visualised as-
+<!--![image alt]()-->
 
 ### Fundamentals of Prompt Engineering
-#### Clarity
-Be clear about what is needed. If the prompt is vague, the output is also effected in the same way.
+The quality of the prompt directly effects the quality of the response. Hence there are a few fundamentals needed to be followed while interacting with a model.
 
-#### Context
+#### 1.Clarity
+Be clear about what is needed. If the prompt is vague, the output will also be vague.
+
+#### 2.Context
 Provide the model with enough background information to understand your need.
 
-#### Break into steps
+#### 3.Break into steps
 Rather than entering one big instruction, break down the complex task into smaller instructions.
 
-#### Use of examples
+#### 4.Use of examples
 Provide examples in your input to guide the model.
+
+###Example of Good prompt vs Bad prompt
+
+
 
 ### Role in Optimising Language Model Interactions
 #### 1. Improved performance
@@ -28,7 +37,7 @@ Well structured prompts significantly impact the performance of AI models by pro
 It helps the users to frame their instructions specific to their task and needs. Users can customise their prompts enabling a more personalized AI interaction.
 
 #### 3. Increased Efficiency
-Structured interactions help in reducing the time which is spent on perfoming a task by streamlining the conversations.
+Structured interactions help in reducing the time which is spent on perfoming a task by streamlining the conversation.
 
 #### 4. Improved Decision Making
 It enables the users to obtain relevant information and insights, helping in making informed and data-driven decisions.
