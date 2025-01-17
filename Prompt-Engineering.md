@@ -29,14 +29,14 @@ Provide examples in your input to guide the model.
 ### Example of Good prompt vs Bad prompt
 
 # Bad Prompt
-''' bash
+```bash
 Write a blog post about machine learning.
-'''
+```
 
 # Good Prompt
-''' bash
+```bash
 Write a 500-word blog post introducing machine learning. Cover its definition, key concepts like supervised and unsupervised learning, and practical applications in various fields. Include examples for better understanding.
-'''
+```
 
 ### Role in Optimising Language Model Interactions
 #### 1. Improved performance
