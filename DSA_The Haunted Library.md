@@ -1,13 +1,11 @@
-# The Haunted Library
+# The Haunted Library ⚡
 
 ## Problem Statement
 A group of adventurers has entered a haunted library where books are arranged in a row. Each book has a certain magical power level. The library is cursed: if you take too many powerful books together, the curse activates!  
 
 The adventurers must pick the longest subarray of books where the sum of their powers does not exceed a given limit.
 
----
 
----
 
 ## Example Input/Output
 ### Input:
@@ -18,17 +16,57 @@ The adventurers must pick the longest subarray of books where the sum of their p
 `4`  
 **Explanation**: The longest subarray is `[2, 3, 1, 2]`.
 
----
 
 
-## Approaches
+#
+# Different Approaches⚡
 
----
 
-### 1. Sliding Window Approach
-- This approach is optimal for finding the longest subarray under a given condition.
-- It uses a dynamic window that grows when the sum is under the limit and shrinks when the sum exceeds the limit.
-- Each element is processed at most twice — once when expanding the window and once when shrinking it.
+
+## 1. **Sliding Window 🪟** 
+## Intuition 💡
+
+- Imagine the books are lined up, and you’re trying to carry as many as possible without exceeding a weight limit.
+- Start adding books one by one to your bag.
+- If the bag gets too heavy (sum exceeds the limit), start removing books from the front until it’s light enough.
+- Keep track of the maximum number of books you successfully carried at any time.
+
+## Approach 🧭
+
+**1. Initialize Variables:**
+
+- start = 0: Marks the beginning of the window.
+- sum = 0: Tracks the total magical power of books in the window.
+- maxLength = 0: Keeps track of the longest valid window.
+
+**2. Expand the Window:**
+
+- Loop through each book using end (the current position in the row).
+- Add the power of the current book (powers[end]) to the total sum.
+
+**3. Shrink the Window (if needed):**
+
+- If the sum exceeds the limit, remove books from the start:
+- Subtract the power of the book at start from sum.
+- Move start forward (shrink the window).
+
+**4. Update the Maximum Length:**
+
+- If the sum is within the limit, calculate the length of the current window (end - start + 1).
+- Update maxLength if the current window is the longest seen so far.
+
+**5. Return the Result:**
+
+- After the loop, maxLength will contain the length of the longest valid window.
+
+## Time Complexity ⏳:
+
+- Efficient because it processes each book at most twice (once when adding to the window and once when removing from the window).
+- Total time: O(n).
+## Space Complexity 📦:
+
+- Uses only constant extra space for tracking variables (start, sum, maxLength).
+- Total space: O(1).
 
 #### Code: **C++**
 
@@ -62,14 +100,46 @@ int main() {
 }
 ```
 
----
 
----
+## **2. Prefix Sum ➕** 
 
-### 2. Prefix Sum Approach
-- The prefix sum array is built such that each index stores the cumulative sum of all elements up to that point.
-- Using the prefix sum, the sum of any subarray `[i, j]` is computed in constant time:
-- This eliminates the need to recompute sums repeatedly.
+
+## Intuition 💡
+
+- First, build the prefix sum array.
+- Then, iterate through all possible subarrays using two pointers (i and j).
+- For each subarray, check if the sum (calculated using the prefix sum formula) is within the given limit.
+- Keep track of the longest subarray that satisfies the condition.
+
+## Approach 🧭
+
+**1. Build the Prefix Sum Array:**
+
+- Initialize prefixSum[0] = 0.
+- For each book, calculate the running sum and store it in prefixSum.
+
+**2. Iterate Through All Subarrays:**
+
+- Use two pointers i (start of the subarray) and j (end of the subarray).
+- For each subarray defined by i and j, calculate the sum as:
+```
+prefixSum[𝑗+1] − prefixSum[𝑖]
+```
+- If the sum is within the limit, update the maximum length.
+
+**3. Return the Maximum Length:**
+
+- After checking all subarrays, return the longest valid subarray length.
+
+## Time Complexity ⏳:
+
+- For each starting index i, we check all ending indices j (i ≤ j < n), which involves O(n²) operations.
+- Total time: O(n²).
+## Space Complexity 📦:
+
+- The prefixSum array requires O(n) additional space.
+- Total space: O(n).
+
 
 #### Code: **C++**
 ```
@@ -105,12 +175,52 @@ int main() {
     return 0;
 }
 ```
----
----
 
-### 3. Brute Force Approach
-- In this approach, all possible subarrays are generated, and their sums are computed individually.
-- For each subarray, check if the sum is within the limit. Track the maximum length of valid subarrays.
+## **3. Brute Force 🐢** 
+
+## Intuition 💡
+**1. Examine All Possible Subarrays:**
+
+- For every starting point i in the array, examine all possible ending points j where j >= i.
+- For each subarray defined by i and j, calculate the sum of the elements.
+
+**2. Check the Sum:**
+
+- If the sum of the subarray is less than or equal to the limit, calculate its length (j - i + 1) and update the maximum length if this subarray is the longest so far.
+
+**3. Optimization:**
+
+- If at any point the sum exceeds the limit, break out of the inner loop as adding more elements will only increase the sum.
+
+## Approach 🧭
+
+**1. Initialize Variables:**
+
+- maxLength = 0: Tracks the longest valid subarray found.
+
+**2. Outer Loop (Starting Point):**
+
+- For each i from 0 to n-1, treat i as the starting point of the subarray.
+
+**3. Inner Loop (Ending Point):**
+
+- For each j from i to n-1, treat j as the ending point of the subarray:
+- Calculate the sum of the subarray from i to j.
+  - If the sum is less than or equal to the limit:
+  - Calculate the length of the subarray (j - i + 1).
+     - Update maxLength if the current subarray is the longest.
+  - If the sum exceeds the limit, break out of the inner loop.
+
+**4. Return the Result:**
+
+- After processing all subarrays, return maxLength.
+
+
+## Time Complexity ⏳:
+- O(n²) — brute force checks all possible subarrays.
+## Space Complexity 📦:
+- O(1) — no additional space required apart from the input and a few variables.
+
 
 #### Code: **C++**
 ```
@@ -149,38 +259,19 @@ int main() {
 
 ---
 
-## Performance Analysis
-
----
+## Performance Analysis 📊 
 
 
 
-### Sliding Window Approach:
+![Screenshot 2025-01-17 202831](https://github.com/user-attachments/assets/331ae033-f38b-4421-868e-b98ab7749516)
 
-- **Time Complexity**: \(O(n)\), where \(n\) is the number of books. Each element is processed at most twice (once added and once removed).
-- **Space Complexity**: \(O(1)\), as it uses constant space.
-- **Best For**: Large input sizes due to linear time complexity.
+**Use Sliding Window 🪟:**
 
----
+- It is the most efficient approach for this problem and works well for large inputs.
 
-### Prefix Sum Approach:
+**Use Prefix Sum: ➕**
+- This can be a useful alternative for problems where subarray sums need to be queried multiple times in different contexts.
 
-- **Time Complexity**: \(O(n^2)\), as it involves two nested loops to calculate subarray sums.
-- **Space Complexity**: \(O(n)\), for the prefix sum array.
-- **Best For**: Medium-sized inputs where simplicity is acceptable.
+**Avoid Brute Force: 🐢**
+- While easy to implement, it should be avoided for large datasets due to its inefficiency.
 
----
-
-### Brute Force Approach:
-
-- **Time Complexity**: \(O(n^2)\), as it involves two nested loops with explicit sum calculations.
-- **Space Complexity**: \(O(1)\), as no extra space is used.
-- **Best For**: Small input sizes due to inefficiency for larger datasets.
-
-
----
-
-## Key Insights
-
-- The curse constraint makes it necessary to carefully manage the sum within the limit, influencing algorithm efficiency.
-- The sliding window approach is the most efficient and scales well with large input sizes, while the prefix sum and brute force approaches are less efficient but easier to implement and understand for smaller datasets.
