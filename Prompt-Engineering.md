@@ -8,7 +8,7 @@ The practice of designing and improving input text(prompt) which is entered to g
 A Prompt is a detailed text in natural language given to a model to get desired or expected output. It is an interaction between a user and an AI model. 
 
 This process can be visualised as-
-<!--![image alt]()-->
+![image alt](https://github.com/ManushreeGrover/technical-writing-prompteng/blob/main/Prompteng1.png?raw=true)
 
 ### Fundamentals of Prompt Engineering
 The quality of the prompt directly effects the quality of the response. Hence there are a few fundamentals needed to be followed while interacting with a model.
