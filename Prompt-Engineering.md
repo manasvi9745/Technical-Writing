@@ -8,7 +8,8 @@ The practice of designing and improving input text(prompt) which is entered to g
 A Prompt is a detailed text in natural language given to a model to get desired or expected output. It is an interaction between a user and an AI model. 
 
 This process can be visualised as-
-![image alt](https://github.com/ManushreeGrover/technical-writing-prompteng/blob/main/Prompteng1.png?raw=true)
+
+<!--![image alt]()-->
 
 ### Fundamentals of Prompt Engineering
 The quality of the prompt directly effects the quality of the response. Hence there are a few fundamentals needed to be followed while interacting with a model.
@@ -25,9 +26,17 @@ Rather than entering one big instruction, break down the complex task into small
 #### 4.Use of examples
 Provide examples in your input to guide the model.
 
-###Example of Good prompt vs Bad prompt
+### Example of Good prompt vs Bad prompt
 
+# Bad Prompt
+'''bash
+Write a blog post about machine learning.
+'''
 
+# Good Prompt
+'''bash
+Write a 500-word blog post introducing machine learning. Cover its definition, key concepts like supervised and unsupervised learning, and practical applications in various fields. Include examples for better understanding.
+'''
 
 ### Role in Optimising Language Model Interactions
 #### 1. Improved performance
