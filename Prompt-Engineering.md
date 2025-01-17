@@ -4,7 +4,7 @@
 <!--Explain the fundamentals of prompt engineering and its significance in optimizing language model interactions.-->
 The practice of designing and improving input text(prompt) which is entered to guide Large Language Models (LLM's) such as ChatGPT for producing desired output is termed as Prompt Engineering. It is all about structuring the instructions to get best possible output. In this, queries are structured in a way that maximises the model's efficiency, performance and makes the conversation more meaningful.
 
-### What is a prompt?
+### What is a Prompt?
 A Prompt is a detailed text in natural language given to a model to get desired or expected output. It is an interaction between a user and an AI model. 
 
 This process can be visualised as-
@@ -28,12 +28,12 @@ Provide examples in your input to guide the model.
 
 ### Example of Good prompt vs Bad prompt
 
-# Bad Prompt
+#### Bad Prompt
 ```bash
 Write a blog post about machine learning.
 ```
 
-# Good Prompt
+#### Good Prompt
 ```bash
 Write a 500-word blog post introducing machine learning. Cover its definition, key concepts like supervised and unsupervised learning, and practical applications in various fields. Include examples for better understanding.
 ```
