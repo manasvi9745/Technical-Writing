@@ -14,16 +14,16 @@ This process can be visualised as-
 ### Fundamentals of Prompt Engineering
 The quality of the prompt directly affects the quality of the response. Hence, there are a few fundamentals need to be followed while interacting with a model.
 
-#### 1.Clarity
+#### 1. Clarity
 Be clear about what is needed. If the prompt is vague, the output will also be vague.
 
-#### 2.Context
+#### 2. Context
 Provide the model with enough background information to understand your need.
 
-#### 3.Break into Steps
+#### 3. Break into Steps
 Rather than entering one big instruction, break down the complex task into smaller instructions.
 
-#### 4.Use of Examples
+#### 4. Use of Examples
 Provide examples in your input to guide the model.
 
 ### Example of Good Prompt vs Bad Prompt
