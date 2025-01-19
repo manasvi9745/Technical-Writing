@@ -197,8 +197,17 @@ Compare the libraries and frameworks available in both languages, and their impa
 ## Platform Independence
 Explain how Java’s platform independence through the JVM compares to C++'s platform-specific compilation and execution.
 
-## Security Features
-Discuss the security features of C++ and Java, including how each language handles vulnerabilities and memory safety.
+### **Security in C++ and Java: Memory Safety and Vulnerability Handling**
+
+**C++ Security Mechanisms**  
+- **Memory Management**: Offers manual control through `new` and `delete`, which enables high performance but risks vulnerabilities like buffer overflows and memory leaks.  
+- **Modern Enhancements**: Smart pointers, bounds-checked containers, and RAII reduce common issues, while tools like AddressSanitizer and compiler flags (e.g., `-fstack-protector`) help detect and prevent vulnerabilities.  
+- **Challenges**: Lack of built-in safety checks relies heavily on developer expertise, increasing the potential for errors.  
+
+**Java’s Approach to Security**  
+- **Automatic Memory Management**: Garbage collection eliminates risks of memory leaks and dangling pointers, while array bounds checking prevents buffer overflows.  
+- **Built-In Protections**: No direct memory access and JVM runtime checks (e.g., type safety and bytecode verification) ensure strong memory safety.  
+- **Vulnerability Mitigation**: Exception handling and regular updates address threats, and Java’s secure-by-design approach makes it ideal for enterprise applications.
 
 ## Use Cases and Industry Adoption
 Provide examples of industries or domains where C++ excels (e.g., embedded systems, gaming) and where Java dominates (e.g., enterprise software, Android apps).
