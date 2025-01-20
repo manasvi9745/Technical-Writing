@@ -164,6 +164,24 @@ Choosing between SQL and NoSQL depends on several factors:
 
 
 ## 🌐 Popular NoSQL Databases
-1. **MongoDB** – A document-based database popular for its flexibility.  
-
+NoSQL databases are categorized into four main types:
+1. **Document-based**: Store data in flexible, JSON-like documents.
+2. **Key-Value**: Use a simple key-value pair structure.
+3. **Column-Family**: Organize data into columns instead of rows.
+4. **Graph databases**: Store data as nodes and edges.
+   
+The following are examples of popular NoSQL databases along with their types:
+1. **MongoDB** – A document-based database popular for its flexibility. Stores data in documents, making them ideal for semi-structured data and hierarchical relationships.
+   
+2. **Couchbase** – A document-based NoSQL database designed for high performance and scalability, often used in real-time applications.
+ 
+3. **Redis** – A key-value store known for its in-memory storage and high-speed performance, commonly used for caching and real-time analytics.
+ 
+4. **DynamoDB** – A key-value and document-based NoSQL database by AWS, optimized for low-latency and serverless applications.
+ 
+5. **Apache Cassandra** – A column-family database designed for distributed and highly available data storage, ideal for handling large amounts of structured data.
+ 
+6. **HBase** – A column-family database built on Hadoop, optimized for real-time read/write operations in big data applications.
+ 
+7. **Amazon Neptune** – A fully managed graph database service supporting both property graphs and RDF graph models, suitable for recommendation engines and fraud detection.
 
