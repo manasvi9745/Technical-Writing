@@ -78,7 +78,7 @@ Java's enduring success stems from a combination of innovative features:
 
 ---
 ## Performance Comparison
-### Comparison of C++ and Java: Memory Management, Execution Speed, and Optimization
+### Comparison of C++ and Java: Memory Management, Execution Speed, and Optimization:
 
 **1. Memory Management**  
 - **C++**: Uses manual memory management with `new` and `delete`, giving developers full control but increasing the risk of issues like memory leaks. Modern C++ introduces smart pointers for safer memory handling.  
