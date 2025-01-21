@@ -169,6 +169,26 @@ Choosing between SQL and NoSQL depends on several factors:
 
 
 ## 🌐 Popular NoSQL Databases
-1. **MongoDB** – A document-based database popular for its flexibility.  
+NoSQL databases are categorized into four main types based on their data model:
 
+1. **Document-based**📄: Store data in flexible, JSON-like documents.
+2. **Key-Value**🗝️: They are the simplest and easiest to implement. They use a simple key-value pair structure.
+3. **Column-Family**📅: Organize data into columns instead of rows. In this, each row does not need to have the same columns. Thus, they are better than relational databases in terms of flexibility.
+4. **Graph databases**📈: Store data as nodes and edges. Nodes typically store information about people, places and things, while edges store information about the relationships between the nodes.
+   
+The following are examples of popular NoSQL databases along with their types:
+
+1. **MongoDB** – A document-based NoSQL database popular for its flexibility. Stores data in JSON-like documents, making it ideal for semi-structured data and hierarchical relationships.
+   
+2. **Couchbase** – A document-based NoSQL database designed for high performance and scalability, often used in real-time applications, mobile applications, and interactive web apps.
+ 
+3. **Redis** – A key-value store known for its in-memory storage and high-speed performance, commonly used for caching and real-time analytics.
+ 
+4. **DynamoDB** – A key-value and document-based NoSQL database by AWS, optimized for low-latency and serverless applications, making it a strong choice for high-traffic workloads.
+ 
+5. **Apache Cassandra** – A column-family database designed for distributed and highly available data storage, ideal for handling large amounts of structured data.
+ 
+6. **HBase** – A column-family database built on Hadoop, optimized for real-time read/write operations in big data applications.
+ 
+7. **Neo4J** – A graph database designed for relationship-heavy applications, allowing efficient querying of connected data. It enables efficient graph traversal and complex queries.
 
