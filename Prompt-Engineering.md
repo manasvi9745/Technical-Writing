@@ -145,7 +145,17 @@ Prompts play a crucial role in shaping the behavior and outcomes of a language m
 6. **Limited Creativity**: While prompt engineering is effective for task-oriented responses, it may restrict the model's ability to produce creative or novel outputs, which can be a limitation in certain contexts.
 
 ## Strategies for improving prompts
-Provide actionable strategies and techniques for refining prompts to achieve better responses.
+Here are the strategies for improving prompts:
+
+1. **Be Specific and Clear** – Provide precise details to avoid ambiguity.
+2. **Break Down Complex Requests** – Divide multi-part queries into smaller components.
+3. **Provide Context** – Include relevant background or situational details.
+4. **Use Examples for Clarity** – Share examples to guide tone, style, or structure.
+5. **Include Constraints and Preferences** – Define word count, format, or specific requirements.
+6. **Use Follow-Up Questions** – Clarify or expand on the initial response.
+7. **Ask for Multiple Options or Variations** – Request different approaches to choose from.
+8. **Incorporate AI's Strengths** – Align your prompts with AI’s strengths like comparison or analysis.
+9. **Iterate and Refine** – Gradually refine prompts based on initial responses.
 
 ## Use cases
 <!-- Document real-world applications and scenarios where prompt engineering plays a crucial role. -->
