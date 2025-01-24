@@ -314,9 +314,102 @@ git log
   ```
 - **Scenario:** Integrate a bug fix from one branch into another without merging unrelated changes.
 
+### Branching Strategies Overview
+Branching strategies define how code changes are managed and integrated in a version control system like Git. Below are the commonly used strategies and how they can be implemented in a typical workflow.
 
+---
 
-Define the branching strategies used in your project, such as feature branching, release branching, or GitFlow. Explain how branches are created, merged, and deleted in your workflow, Give examples of common branching commands.
+### 1. **Feature Branching**
+Feature branching involves creating a new branch for every feature or task. This allows developers to work on new features in isolation without affecting the main codebase.
+
+- **Branch Creation**: Branches are created from the main branch (e.g., `main` or `develop`) for each feature or bug fix.
+- **Merging**: Once the feature is complete and reviewed, it is merged back into the main branch using a pull request (PR) or merge request (MR).
+- **Deletion**: After merging, the feature branch is deleted to keep the repository clean.
+
+**Commands**:
+```bash
+# Create and switch to a new feature branch
+git checkout -b feature/new-login
+
+# Push the branch to the remote repository
+git push -u origin feature/new-login
+
+# Merge the branch into the main branch
+git checkout main
+git merge feature/new-login
+
+# Delete the branch locally and remotely
+git branch -d feature/new-login
+git push origin --delete feature/new-login
+```
+
+---
+
+### 2. **Release Branching**
+Release branches are created to prepare a specific release, allowing the team to stabilize the code, perform testing, and apply final fixes.
+
+- **Branch Creation**: A release branch is created from the main development branch (e.g., `develop`) when the release is feature-complete.
+- **Merging**: Once the release is ready, the release branch is merged into `main` for deployment and back into `develop` to include any final fixes.
+- **Deletion**: After merging, the release branch is deleted.
+
+**Commands**:
+```bash
+# Create and switch to a new release branch
+git checkout -b release/1.0.0
+
+# Push the branch to the remote repository
+git push -u origin release/1.0.0
+
+# Merge the release branch into main and develop
+git checkout main
+git merge release/1.0.0
+git checkout develop
+git merge release/1.0.0
+
+# Delete the release branch locally and remotely
+git branch -d release/1.0.0
+git push origin --delete release/1.0.0
+```
+
+---
+
+### 3. **GitFlow**
+GitFlow is a more structured workflow with dedicated branches for features, releases, and hotfixes. The main branches are:
+- `main`: Contains stable, production-ready code.
+- `develop`: Acts as the integration branch for ongoing development.
+
+Other branches include:
+- Feature branches (`feature/*`): For individual features or tasks.
+- Release branches (`release/*`): For preparing releases.
+- Hotfix branches (`hotfix/*`): For critical bug fixes.
+
+**Commands**:
+```bash
+# Feature branch example
+git checkout develop
+git checkout -b feature/add-user-authentication
+git push -u origin feature/add-user-authentication
+
+# Release branch example
+git checkout develop
+git checkout -b release/2.0.0
+git push -u origin release/2.0.0
+
+# Hotfix branch example
+git checkout main
+git checkout -b hotfix/fix-login-bug
+git push -u origin hotfix/fix-login-bug
+
+# Merging and cleanup
+git checkout main
+git merge hotfix/fix-login-bug
+git checkout develop
+git merge hotfix/fix-login-bug
+git branch -d hotfix/fix-login-bug
+git push origin --delete hotfix/fix-login-bug
+```
+
+---
 
 ### 1. Creating a Branch
 
