@@ -186,7 +186,7 @@ Prompt engineering can assist in drafting personalised letters and job applicati
 Prompt engineering can be used in the financial sector to automate the prediction process. By feeding in structured prompts such as historical data, market condition, company details, etc., AI can generate insights into the financial performance in future and make data driven decisions.
 
 ## A few detailed examples
-### 1. Zero-Shot Prompting
+#### 1. Zero-Shot Prompting
 Zero-shot prompting involves providing a direct question or command without any prior examples. This approach relies solely on the model’s pretraining to interpret and respond accurately.
 
 **Example:**
@@ -197,7 +197,7 @@ Zero-shot prompting involves providing a direct question or command without any 
 - Simple and efficient for straightforward tasks.
 - Limited accuracy for complex or nuanced requests.
 
-### 2. One-Shot Prompting
+#### 2. One-Shot Prompting
 One-shot prompting provides a single example along with the task instruction to guide the model.
 
 **Example:**
@@ -208,8 +208,7 @@ One-shot prompting provides a single example along with the task instruction to 
 - Improves task understanding compared to zero-shot.
 - Suitable for tasks with clear patterns.
 
-
-### 3. Few-Shot Prompting
+#### 3. Few-Shot Prompting
 Few-shot prompting provides multiple examples to establish the context and task requirements more thoroughly.
 
 **Example:**
@@ -223,8 +222,7 @@ Few-shot prompting provides multiple examples to establish the context and task 
 - Provides context for better alignment with user expectations.
 - More effective for nuanced tasks or domain-specific problems.
 
-
-### 4. Chain-of-Thought (CoT) Prompting
+#### 4. Chain-of-Thought (CoT) Prompting
 Chain-of-thought prompting explicitly encourages the model to reason step-by-step before arriving at the final output.
 
 **Example:**
@@ -248,7 +246,7 @@ Chain-of-thought prompting explicitly encourages the model to reason step-by-ste
 - Encourages logical reasoning, improving performance on multi-step problems.
 - Useful for complex tasks requiring intermediate steps.
 
-### 5. Iterative Prompting
+#### 5. Iterative Prompting
 Iterative prompting involves refining the prompt through multiple iterations to improve the quality of the output. Feedback is incorporated to progressively enhance results.
 
 **Example:**
@@ -261,7 +259,7 @@ Iterative prompting involves refining the prompt through multiple iterations to 
 - Improves specificity and relevance over time.
 - Useful for achieving high-quality, targeted outputs.
 
-### 6. Negative Prompting
+#### 6. Negative Prompting
 Negative prompting specifies what the model should avoid or exclude in its response, enhancing precision.
 
 **Example:**
@@ -272,7 +270,7 @@ Negative prompting specifies what the model should avoid or exclude in its respo
 - Helps narrow down focus and avoid irrelevant information.
 - Effective for eliminating unwanted content in outputs.
 
-### 7. Hybrid Prompting
+#### 7. Hybrid Prompting
 Hybrid prompting combines multiple techniques, such as few-shot and instruction-based prompting, to leverage their complementary strengths.
 
 **Example:**
@@ -287,12 +285,14 @@ Hybrid prompting combines multiple techniques, such as few-shot and instruction-
 - Offers flexibility and adaptability for complex tasks.
 - Maximizes strengths of different prompting techniques.
 
-### 8. Prompt Chaining
+#### 8. Prompt Chaining
 Prompt chaining involves using the output of one prompt as the input for another to solve complex, multi-step tasks.
 
 **Example:**
 - **Prompt 1:** Generate a list of key milestones in human space exploration.
-- **Output 1:** 1. Launch of Sputnik 1. 2. Moon landing of Apollo 11. 3. Mars rover missions.
+- **Output 1:** 1. Launch of Sputnik 1.
+                2. Moon landing of Apollo 11.
+                3. Mars rover missions.
 - **Prompt 2:** Describe the significance of these milestones.
 - **Output 2:** The launch of Sputnik 1 marked the beginning of space exploration. The Apollo 11 moon landing demonstrated human capability to explore extraterrestrial bodies. Mars rover missions have provided critical insights into the Martian environment.
 
@@ -302,7 +302,69 @@ Prompt chaining involves using the output of one prompt as the input for another
 
 
 ## Common Pitfalls in Prompt Engineering  
-Highlight typical mistakes and misconceptions in prompt design, offering solutions for improvement.
+#### 1. Being Too Vague
+- **Mistake**: Using generic or unclear language that doesn’t give the model enough context.  
+  - **Example**: “How can I master DSA.”  
+    - The AI may produce irrelevant or overly broad responses.  
+- **Solution**: Be specific and detailed.  
+  - **Example**:  
+    "Give a comprehensive plan on mastering Data Structures and Algorithms, including a detailed study plan, essential topics to cover, recommended resources, and practical tips for practicing and solving problems effectively."
+
+#### 2. Asking for Multiple Tasks at Once
+- **Mistake**: Combining several unrelated tasks into a single prompt.  
+  - **Example**:  
+    "Summarize this article, explain its key themes, and suggest improvements."  
+    - This can confuse the AI and lead to incomplete responses.  
+- **Solution**: Break the task into smaller, individual prompts.  
+  - **Example**:  
+    - "Summarize this article in 100 words."  
+    - "Explain the key themes of the article."  
+    - "Suggest three improvements to the article."
+
+#### 3. Using Ambiguous Language
+- **Mistake**: Using unclear or interpretative words.  
+  - **Example**:  
+    "Make it better."  
+    - The AI doesn't know what "better" means in this context (e.g., clearer, more detailed, shorter).  
+- **Solution**: Define the criteria for improvement.  
+  - **Example**:  
+    "Rewrite the paragraph to make it more concise and professional."
+
+#### 4. Overloading the Prompt
+- **Mistake**: Writing excessively long or complex prompts.  
+  - **Example**:  
+    "In 10 paragraphs, explain the history of AI, its current applications, future potential, and how it compares to human intelligence in terms of problem-solving and learning."  
+    - This can overwhelm the AI and reduce output quality.  
+- **Solution**: Simplify and focus on one aspect at a time.  
+  - **Example**:  
+    "Explain the history of AI in 3 paragraphs."  
+    Follow it with, "Describe the current applications of AI."
+
+#### 5. Ignoring Context or Background Information
+- **Mistake**: Assuming the AI knows specific context without providing it.  
+  - **Example**:  
+    "Explain the importance of this law."  
+    - The AI may not know which law you're referring to.  
+- **Solution**: Provide all relevant context within the prompt.  
+  - **Example**:  
+    "Explain the importance of Newton’s Laws of Motion."
+
+#### 6. Being Overly Open-Ended
+- **Mistake**: Leaving the AI too much room for interpretation.  
+  - **Example**:  
+    "Write a story."  
+    - The story might not align with your expectations or needs.  
+- **Solution**: Add specific constraints or requirements.  
+  - **Example**:  
+    "Write a 1,500-word mystery story set in 19th-century London, featuring a detective and a stolen painting."
+
+#### Key Tips to Avoid Prompt Design Mistakes:
+1. **Clarity is key**: Be explicit about what you want.  
+2. **Keep it concise**: Avoid unnecessary complexity.  
+3. **Use examples**: Show the tone, style, or format you prefer.  
+4. **Iterate**: Refine your prompts based on the outputs.  
+5. **Experiment**: Test different phrasing to see what works best.
+
 
 ## Tools for Testing and Optimizing Prompts  
 List and review tools that help users test, debug, and optimize their prompts for better results.
