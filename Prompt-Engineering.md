@@ -186,7 +186,134 @@ Prompt engineering can assist in drafting personalised letters and job applicati
 Prompt engineering can be used in the financial sector to automate the prediction process. By feeding in structured prompts such as historical data, market condition, company details, etc., AI can generate insights into the financial performance in future and make data driven decisions.
 
 ## A few detailed examples
-Share detailed examples demonstrating various prompt techniques and their effects on model performance.
+# Prompting Techniques and Their Impact
+
+## 1. Zero-Shot Prompting
+Zero-shot prompting involves providing a direct question or command without any prior examples. This approach relies solely on the model’s pretraining to interpret and respond accurately.
+
+**Example:**
+- **Prompt:** Give me a simple definition of photosynthesis.
+- **Output:** Sure! Photosynthesis is the process by which green plants, algae, and some bacteria use sunlight to convert carbon dioxide and water into glucose (a type of sugar) and oxygen. This process is essential for the production of the oxygen we breathe and serves as the basis for the food chain. In essence, it's nature's way of turning light energy into chemical energy to fuel life.
+
+**Impact:**
+- Simple and efficient for straightforward tasks.
+- Limited accuracy for complex or nuanced requests.
+
+---
+
+## 2. One-Shot Prompting
+One-shot prompting provides a single example along with the task instruction to guide the model.
+
+**Example:**
+- **Prompt:** Convert the following sentence to passive voice- "The cat chased the mouse." Like "John painted the house" becomes "The house was painted by John."
+- **Output:** Certainly! The passive voice version of the sentence "The cat chased the mouse" is: "The mouse was chased by the cat."
+
+**Impact:**
+- Improves task understanding compared to zero-shot.
+- Suitable for tasks with clear patterns.
+
+---
+
+## 3. Few-Shot Prompting
+Few-shot prompting provides multiple examples to establish the context and task requirements more thoroughly.
+
+**Example:**
+- **Prompt:** Translate the following sentences to French like:
+  - Hello — Bonjour
+  - I like you — J’aime tu.
+  Now translate: "She is cooking dinner."
+- **Output:** Here’s the translation in French: "She is cooking dinner" — Elle prépare le dîner.
+
+**Impact:**
+- Provides context for better alignment with user expectations.
+- More effective for nuanced tasks or domain-specific problems.
+
+---
+
+## 4. Chain-of-Thought (CoT) Prompting
+Chain-of-thought prompting explicitly encourages the model to reason step-by-step before arriving at the final output.
+
+**Example:**
+- **Prompt:** Calculate the sum of the first 5 odd numbers.
+- **Output:**
+  1. The first odd number is 1.
+  2. The second odd number is 3.
+  3. The third odd number is 5.
+  4. The fourth odd number is 7.
+  5. The fifth odd number is 9.
+  6. To find the sum, we add these numbers together:  
+     1 + 3 + 5 + 7 + 9  
+  7. Adding the numbers step-by-step:  
+     - 1 + 3 = 4  
+     - 4 + 5 = 9  
+     - 9 + 7 = 16  
+     - 16 + 9 = 25  
+  8. Therefore, the sum of the first 5 odd numbers is 25.
+
+**Impact:**
+- Encourages logical reasoning, improving performance on multi-step problems.
+- Useful for complex tasks requiring intermediate steps.
+
+---
+
+## 5. Iterative Prompting
+Iterative prompting involves refining the prompt through multiple iterations to improve the quality of the output. Feedback is incorporated to progressively enhance results.
+
+**Example:**
+- **Initial Prompt:** Write a summary of climate change.
+- **Initial Output:** Climate change is the change in global temperatures due to greenhouse gases.
+- **Refined Prompt:** Write a detailed summary of climate change, including its causes, effects, and mitigation strategies.
+- **Refined Output:** Climate change refers to the long-term alteration of temperature and weather patterns, primarily caused by human activities like burning fossil fuels. Its effects include rising sea levels, extreme weather events, and biodiversity loss. Mitigation strategies include reducing emissions, adopting renewable energy, and enhancing carbon capture.
+
+**Impact:**
+- Improves specificity and relevance over time.
+- Useful for achieving high-quality, targeted outputs.
+
+---
+
+## 6. Negative Prompting
+Negative prompting specifies what the model should avoid or exclude in its response, enhancing precision.
+
+**Example:**
+- **Prompt:** Describe the solar system but exclude details about Earth.
+- **Output:** The solar system consists of the Sun, planets like Mars and Jupiter, moons, asteroids, and comets. Mars has a thin atmosphere, while Jupiter is a gas giant with a Great Red Spot.
+
+**Impact:**
+- Helps narrow down focus and avoid irrelevant information.
+- Effective for eliminating unwanted content in outputs.
+
+---
+
+## 7. Hybrid Prompting
+Hybrid prompting combines multiple techniques, such as few-shot and instruction-based prompting, to leverage their complementary strengths.
+
+**Example:**
+- **Prompt:** Translate the following sentences to Spanish. Example: "I like apples" becomes "Me gustan las manzanas." Follow this structure:  
+  - "She loves music."  
+  - "They play soccer."
+- **Output:** 
+  1. Ella ama la música.  
+  2. Ellos juegan fútbol.
+
+**Impact:**
+- Offers flexibility and adaptability for complex tasks.
+- Maximizes strengths of different prompting techniques.
+
+---
+
+## 8. Prompt Chaining
+Prompt chaining involves using the output of one prompt as the input for another to solve complex, multi-step tasks.
+
+**Example:**
+- **Prompt 1:** Generate a list of key milestones in human space exploration.
+- **Output 1:** 1. Launch of Sputnik 1. 2. Moon landing of Apollo 11. 3. Mars rover missions.
+- **Prompt 2:** Describe the significance of these milestones.
+- **Output 2:** The launch of Sputnik 1 marked the beginning of space exploration. The Apollo 11 moon landing demonstrated human capability to explore extraterrestrial bodies. Mars rover missions have provided critical insights into the Martian environment.
+
+**Impact:**
+- Allows decomposition of complex tasks into manageable steps.
+- Enhances clarity and accuracy for multi-faceted problems.
+
 
 ## Common Pitfalls in Prompt Engineering  
 Highlight typical mistakes and misconceptions in prompt design, offering solutions for improvement.
