@@ -186,9 +186,7 @@ Prompt engineering can assist in drafting personalised letters and job applicati
 Prompt engineering can be used in the financial sector to automate the prediction process. By feeding in structured prompts such as historical data, market condition, company details, etc., AI can generate insights into the financial performance in future and make data driven decisions.
 
 ## A few detailed examples
-# Prompting Techniques and Their Impact
-
-## 1. Zero-Shot Prompting
+# 1. Zero-Shot Prompting
 Zero-shot prompting involves providing a direct question or command without any prior examples. This approach relies solely on the model’s pretraining to interpret and respond accurately.
 
 **Example:**
@@ -201,7 +199,7 @@ Zero-shot prompting involves providing a direct question or command without any 
 
 ---
 
-## 2. One-Shot Prompting
+# 2. One-Shot Prompting
 One-shot prompting provides a single example along with the task instruction to guide the model.
 
 **Example:**
@@ -214,7 +212,7 @@ One-shot prompting provides a single example along with the task instruction to 
 
 ---
 
-## 3. Few-Shot Prompting
+# 3. Few-Shot Prompting
 Few-shot prompting provides multiple examples to establish the context and task requirements more thoroughly.
 
 **Example:**
@@ -230,7 +228,7 @@ Few-shot prompting provides multiple examples to establish the context and task 
 
 ---
 
-## 4. Chain-of-Thought (CoT) Prompting
+# 4. Chain-of-Thought (CoT) Prompting
 Chain-of-thought prompting explicitly encourages the model to reason step-by-step before arriving at the final output.
 
 **Example:**
@@ -256,7 +254,7 @@ Chain-of-thought prompting explicitly encourages the model to reason step-by-ste
 
 ---
 
-## 5. Iterative Prompting
+# 5. Iterative Prompting
 Iterative prompting involves refining the prompt through multiple iterations to improve the quality of the output. Feedback is incorporated to progressively enhance results.
 
 **Example:**
@@ -271,7 +269,7 @@ Iterative prompting involves refining the prompt through multiple iterations to 
 
 ---
 
-## 6. Negative Prompting
+# 6. Negative Prompting
 Negative prompting specifies what the model should avoid or exclude in its response, enhancing precision.
 
 **Example:**
@@ -284,7 +282,7 @@ Negative prompting specifies what the model should avoid or exclude in its respo
 
 ---
 
-## 7. Hybrid Prompting
+# 7. Hybrid Prompting
 Hybrid prompting combines multiple techniques, such as few-shot and instruction-based prompting, to leverage their complementary strengths.
 
 **Example:**
@@ -301,7 +299,7 @@ Hybrid prompting combines multiple techniques, such as few-shot and instruction-
 
 ---
 
-## 8. Prompt Chaining
+# 8. Prompt Chaining
 Prompt chaining involves using the output of one prompt as the input for another to solve complex, multi-step tasks.
 
 **Example:**
