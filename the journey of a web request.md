@@ -16,7 +16,7 @@ possible resolution by retrieving the IP address from the closest available cach
 
 Here is the working of the hierarchy-
 
-**1. Browser Cache**
+#### 1. Browser Cache
 - The browser is the first place checked for a cached DNS entry. Browsers store DNS records for previously visited domains.
 - This cache reduces the need for repetitive DNS lookups, enhancing performance.
 - Time Complexity - O(1)
@@ -39,7 +39,7 @@ Here is the working of the hierarchy-
 -  If the DNS server does not contain the requested DNS record, the resolver queries the authoritative DNS server for the domain.
 -  The authoritative DNS server provides the definitive IP address for the requested domain.
 -  Time Complexity: O(n) where n is the number of hierarchical DNS servers queried
-- 
+  
 ### Performance Impact
 
 - **Cache Hits:** The closer the cache layer, the faster the resolution. For example, a hit in the browser cache is the fastest.
