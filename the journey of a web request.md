@@ -8,7 +8,43 @@ When you type a URL in your browser and press Enter, a fascinating journey begin
 - If not found in caches, it queries DNS servers
 - Finally gets the IP address of the server
 
-**TODO:** Add explanation of DNS cache hierarchy and time complexity of DNS lookups
+<!-- **TODO:** Add explanation of DNS cache hierarchy and time complexity of DNS lookups -->
+### DNS Cache Hierarchy
+
+DNS resolution involves multiple layers of caching. Each layer in the DNS cache hierarchy is checked sequentially, ensuring the fastest 
+possible resolution by retrieving the IP address from the closest available cache.
+
+Here is the working of the hierarchy-
+
+**1. Browser Cache**
+- The browser is the first place checked for a cached DNS entry. Browsers store DNS records for previously visited domains.
+- This cache reduces the need for repetitive DNS lookups, enhancing performance.
+- Time Complexity - O(1)
+  
+**2. Operating System (OS) Cache**
+- If the IP address isn't found in the browser cache, the operating system's DNS cache is checked.
+- The OS maintains the local cache of the DNS records retrieved by all the applications, including the browsers.
+- Time Complexity - O(1)
+
+**3. Router Cache**
+ - If the IP address is not in the OS cache, the query is sent to the local router.
+ - Many modern routers cache DNS records to speed up requests from devices on the same network.
+ - Time Complexity - O(1)
+
+**4. DNS Resolver Cache**
+- If the OS cache doesn't have the record, the query is sent to the Recursive DNS Resolver Cache, usually managed by the ISP or a third-party provider (e.g. Google DNS).
+- Time Complexity - O(1)
+  
+**5. Authoritative DNS Server**
+-  If the DNS server does not contain the requested DNS record, the resolver queries the authoritative DNS server for the domain.
+-  The authoritative DNS server provides the definitive IP address for the requested domain.
+-  Time Complexity: O(n) where n is the number of hierarchical DNS servers queried
+- 
+### Performance Impact
+
+- **Cache Hits:** The closer the cache layer, the faster the resolution. For example, a hit in the browser cache is the fastest.
+- **Cache Miss:** If no cache layer has the IP address, the query goes through the full DNS hierarchy, increasing latency.
+- **TTL (Time To Live):** DNS records have a TTL value that determines how long they are cached. Short TTLs lead to more frequent cache misses.
 
 ## 2. Establishing TCP Connection
 - The browser initiates a TCP connection with the server
