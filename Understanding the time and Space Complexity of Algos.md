@@ -141,15 +141,63 @@ Space Complexity:
 
 
 13. Fibonacci Sequence (Recursive)
-Description: Calculates the nth Fibonacci number using recursive calls.
-Time Complexity: 
-Space Complexity:
+
+**Description:** Calculates the nth Fibonacci number using recursive calls. This results in Recurrence relation:
+- F(n)=F(n-1) + F(n-2)
+
+**Time Complexity:** O(2^n)
+- Each Fibonacci number is calculated using 2 recursive calls.
+- This creates an exponential number of function calls.
+- The recurrence tree has a depth of n and at each level, the number of calls doubles, leading to exponential time complexity.
+  
+```java
+public static int fib(int n) {
+		if(n==0) {
+			return 0;
+		}
+		
+		if(n==1) {
+			return 1;
+		}
+		
+		return fib(n-1)+fib(n-2);
+  }
+```
+
+**Space Complexity:** O(n)
+- The recursion stack has a depth of n as the function calls reach to the base case.
+- An example representation:
+  ![Image](https://github.com/user-attachments/assets/107309a2-4d7e-4f92-8788-5936cccd1dda)
 
 
 14. Fibonacci Sequence (Dynamic Programming)
-Description: Calculates the nth Fibonacci number using a bottom-up approach with memoization.
-Time Complexity: 
-Space Complexity:
+
+    
+**Description:** Calculates the nth Fibonacci number using a bottom-up approach with memoization.
+
+**Time Complexity:** O(n) 
+- Each Fibonacci number is calculated only once and stored in memory for re-use to avoid redundant calculations.
+  
+**Space Complexity:**O(n)
+- An array of size n+1 (since 0 based indexing) used to store the values.
+
+```java
+public static int fib_memo(int n) {
+		int memo[]=new int[n+1];
+		memo[0]=0;
+		memo[1]=1;
+		
+		if(n==0 || n==1) {
+			return n;
+		}
+		
+		for(int i=2;i<memo.length;i++) {
+			memo[i]=memo[i-1]+memo[i-2];
+		}
+		
+		return memo[n];
+}
+```
 
 
 15. Matrix Multiplication (Naive)
