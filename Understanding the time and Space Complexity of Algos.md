@@ -4,18 +4,34 @@ This document lists various algorithms and their time/space complexities. Some c
 
 1. Linear Search
 Description: Sequentially checks each element in a list until a match is found or the end of list is reached.
-Time Complexity: 
-Space Complexity:
+- Best case: O(1) (element found at the start).
+- Worst case: O(n) (element found at the end or not found).
+- Recursive space complexity: O(n) due to function call stack.
+
 
 2. Binary Search
 Description: Repeatedly divides a sorted array in half, eliminating the half that cannot contain the target value.
-Time Complexity: 
-Space Complexity:
+- Best case: O(1) (middle element is the target).
+- Worst case: O(log n) (keep dividing search space).
+- Recursive space complexity: O(log n) (recursion stack depth).
 
 3. Bubble Sort
 Description: Repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
-Time Complexity: 
-Space Complexity:
+- Best case: O(n) (already sorted array).
+- Worst case: O(n²) (comparing every pair).
+- Recursive space complexity: O(n) (function calls).
+
+**Table explaning the complexitites**
+
+| Algorithm     | Approach   | Best Case Time | Average Case Time | Worst Case Time | Space Complexity |
+|--------------|-----------|----------------|--------------------|-----------------|------------------|
+| **Linear Search** | Iterative  | O(1)          | O(n)              | O(n)            | O(1)             |
+|              | Recursive  | O(1)          | O(n)              | O(n)            | O(n) (due to recursion stack) |
+| **Binary Search** | Iterative  | O(1)          | O(log n)          | O(log n)        | O(1)             |
+|              | Recursive  | O(1)          | O(log n)          | O(log n)        | O(log n) (due to recursion stack) |
+| **Bubble Sort** | Iterative  | O(n)          | O(n²)             | O(n²)           | O(1)             |
+|               | Recursive  | O(n)          | O(n²)             | O(n²)           | O(n) (due to recursion stack) |
+
 
 
 4. Selection Sort
@@ -85,9 +101,27 @@ Space Complexity:
 
 
 15. Matrix Multiplication (Naive)
-Description: Multiplies two matrices using the standard row-column multiplication method.
-Time Complexity: 
-Space Complexity:
+Description: Naïve Matrix Multiplication follows the standard row-column method to multiply two matrices. 
+** Time Complexity: **
+- Best-case Complexity: O(mnp)
+- Worst-case Complexity: O(mnp)
+
+Since each element requires n multiplications and additions, the complexity remains O(mnp) in all cases.
+
+** Space Complexity: **
+- The space required to store the resulting matrix C is O(mp).
+
+If auxiliary storage is considered, additional space is minimal, so the space complexity remains O(mp).
+
+** Applications **
+- Computer graphics transformations
+- Scientific computing
+- Machine learning and deep learning computations
+- Engineering simulations
+
+** Limitations **
+1. Inefficiency: The naive approach is slow for large matrices due to its O(mnp) complexity.
+2. Better Alternatives: Strassen’s Algorithm (O(n^{2.81})) and more optimized methods like the Coppersmith-Winograd Algorithm are used for faster computations.
 
 
 Note: For each algorithm, consider:
