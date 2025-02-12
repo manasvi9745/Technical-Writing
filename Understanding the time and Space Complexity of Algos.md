@@ -124,6 +124,10 @@ Space Complexity:
 
 10. Dijkstra's Algorithm
 Description: Finds the shortest paths between nodes in a graph with non-negative edge weights.
+
+Working Principle:
+Uses a priority queue (min-heap) to iteratively pick the node with the smallest known distance, updating distances to its neighbors until all shortest paths are found.
+
 Time Complexity: 
 Best Case: O(V log V)
 Average Case: O((V + E) log V)
@@ -134,6 +138,10 @@ Space Complexity: O(V + E)
 
 11. Floyd-Warshall Algorithm
 Description: Finds shortest paths between all pairs of vertices in a weighted graph.
+
+Working Principle:
+Uses dynamic programming to iteratively update shortest path distances by checking if an intermediate vertex provides a shorter route between two nodes.
+
 Time Complexity: 
 Best Case: O(V^3)
 Average Case: O(V^3)
@@ -143,6 +151,9 @@ Space Complexity: O(V^2)
 
 12. Knapsack Problem (Dynamic Programming)
 Description: Determines the most valuable combination of items that can be carried in a knapsack of limited weight.
+
+Working Principle: Uses a 2D array to store the maximum value obtainable for each item and weight combination, iterating through possible item choices to determine the optimal selection.
+
 Time Complexity: 
 Best Case: O(nW)
 Average Case: O(nW)
