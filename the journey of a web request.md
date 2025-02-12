@@ -68,11 +68,12 @@ Once a threshold is reached, growth shifts to linear (Additive Increase) to prev
 Fast Retransmit & Fast Recovery:
 If 3 duplicate ACKs are received, TCP retransmits lost packets without waiting for a timeout.
 
-How These Mechanisms Manage Data Flow & Congestion:
-1.Prevents receiver overload: The receiver’s advertised window (rwnd) regulates incoming data, ensuring it doesn’t exceed its processing capacity.
-2.Enhances bandwidth efficiency: Techniques like sliding windows and Bandwidth-Delay Product (BDP) optimization help maximize data transmission rates.
-3.Mitigates network congestion: AIMD dynamically scales transmission speed based on real-time network feedback, preventing excessive packet loss.
-4.Promotes fair bandwidth distribution: The multiplicative decrease mechanism ensures equitable network resource allocation among users.
+
+How These Mechanisms Manage Data Flow & Congestion :
+1.Prevents buffer overflow: The receiver’s advertised window (rwnd) ensures that the sender does not overwhelm it.
+2.Optimizes bandwidth usage: Sliding window and BDP tuning maximize throughput efficiency.
+3.Avoids congestion collapse: AIMD dynamically adjusts sending rates based on network conditions.
+4.Maintains fairness: Multiplicative decrease ensures all network users get a fair share of bandwidth.
 
 
 
