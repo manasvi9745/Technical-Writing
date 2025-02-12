@@ -102,27 +102,47 @@ Space Complexity:
 
 15. Matrix Multiplication (Naive)
 Description: Naïve Matrix Multiplication follows the standard row-column method to multiply two matrices. 
-** Time Complexity: **
+**Time Complexity:**
 - Best-case Complexity: O(mnp)
 - Worst-case Complexity: O(mnp)
 
 Since each element requires n multiplications and additions, the complexity remains O(mnp) in all cases.
 
-** Space Complexity: **
+**Space Complexity:**
 - The space required to store the resulting matrix C is O(mp).
 
 If auxiliary storage is considered, additional space is minimal, so the space complexity remains O(mp).
 
-** Applications **
+**Applications**
 - Computer graphics transformations
 - Scientific computing
 - Machine learning and deep learning computations
 - Engineering simulations
 
-** Limitations **
+**Limitations**
 1. Inefficiency: The naive approach is slow for large matrices due to its O(mnp) complexity.
 2. Better Alternatives: Strassen’s Algorithm (O(n^{2.81})) and more optimized methods like the Coppersmith-Winograd Algorithm are used for faster computations.
 
+---
+## Time Complexity Table
+
+| Algorithm | Best Case | Average Case | Worst Case | Explanation |
+|-----------|-----------|--------------|------------|-------------|
+| Linear Search |	O(1) |	O(n) |	O(n) |	Best case: target found at first index. Worst case: last index or not found. |
+| Binary Search |	O(1) |	O(log n) |	O(log n) | Best case: target found in the middle. Worst case: search space halves repeatedly. |
+|-----------|-----------|--------------|------------|-------------|
+| Bubble Sort |	O(n) |	O(n²) |	O(n²) |	Best case: already sorted array, single pass. Worst case: full passes with swaps. |
+| Insertion Sort |	O(n) |	O(n²) |	O(n²) |	Best case: nearly sorted array. Worst case: shifting elements for each insertion. |
+| Selection Sort |	O(n²) |	O(n²) |	O(n²) |	Always makes comparisons for each selection, no best-case improvement. |
+| Merge Sort |	O(n log n) |	O(n log n) |	O(n log n) | Recursively splits and merges arrays. |
+| Quicksort |	O(n log n) |	O(n log n) |	O(n²) |	Worst case: poor pivot selection, causing unbalanced partitions. |
+| Heap Sort |	O(n log n) |	O(n log n) |	O(n log n) |	Always maintains a balanced heap structure. |
+|-----------|-----------|--------------|------------|-------------|
+| DFS (Graph Traversal) |	O(1) |	O(V + E) |	O(V + E) |	Best case: goal node found immediately. Worst case: visits all vertices and edges. |
+| BFS (Graph Traversal) |	O(1) |	O(V + E) |	O(V + E) |	Similar to DFS but processes nodes level by level. |
+|-----------|-----------|--------------|------------|-------------|
+
+---
 
 Note: For each algorithm, consider:
 - Best case scenario
