@@ -97,3 +97,131 @@ Note: For each algorithm, consider:
 - Any space complexity variations based on implementation
 
 Can you help fill in the missing complexities? Create a PR with your solutions!
+
+---
+### **Recursive vs. Iterative Algorithms: Space Complexity Comparison**  
+
+Algorithms can be implemented using **recursion** or **iteration**, but they differ in **space complexity** due to how they manage memory.  
+
+---
+
+## **1. Understanding Space Complexity in Recursion**  
+### How Recursion Uses Memory:  
+- Recursive algorithms use the **call stack** to store function calls until they return.  
+- Each recursive call **adds a new stack frame**, increasing space usage.  
+- The recursion **depth determines space complexity**.  
+
+### **Example: Quick Sort (Recursive)**
+- **Space Complexity:** `O(log n)` (average case), `O(n)` (worst case when unbalanced).  
+- **Reason:** The recursive function calls store partitions on the stack.  
+
+#### **Pseudocode for Recursive Quick Sort**
+```python
+function quickSort(arr, low, high):
+    if low < high:
+        pivotIndex = partition(arr, low, high)
+        quickSort(arr, low, pivotIndex - 1)  # Recursive call for left subarray
+        quickSort(arr, pivotIndex + 1, high) # Recursive call for right subarray
+```
+- **Recursive Depth:** `O(log n)` in the best case but `O(n)` in the worst case (skewed partitioning).  
+- **Memory Usage:** Each function call adds a new stack frame.  
+
+---
+
+## **2. Understanding Space Complexity in Iterative Algorithms**  
+### How Iteration Saves Space:  
+- Iterative algorithms **do not use the call stack** for recursive function calls.  
+- Instead, they use **loop constructs**, requiring **constant space (`O(1)`)** if no extra data structures are needed.  
+
+### **Example: Merge Sort (Iterative)**
+- **Space Complexity:** `O(n)` (due to auxiliary array for merging).  
+- **Reason:** Avoids recursion stack, but still requires temporary storage for merging.  
+
+#### **Pseudocode for Iterative Merge Sort**
+```python
+function mergeSortIterative(arr):
+    n = length(arr)
+    currentSize = 1
+    while currentSize < n:
+        left = 0
+        while left < n-1:
+            mid = min(left + currentSize - 1, n-1)
+            right = min(left + 2*currentSize - 1, n-1)
+            merge(arr, left, mid, right)
+            left += 2 * currentSize
+        currentSize *= 2
+```
+- **No recursion stack used** → avoids `O(log n)` recursive call overhead.  
+- **Still requires `O(n)` auxiliary space** for merging.  
+
+---
+
+## **3. Comparing Recursive vs. Iterative Implementations**  
+
+| Algorithm | Recursive Space Complexity | Iterative Space Complexity |  
+|-----------|---------------------------|---------------------------|  
+| Quick Sort | `O(log n)` (best/avg), `O(n)` (worst) | `O(1)` (if stack avoided) |  
+| Merge Sort | `O(n)` (auxiliary array + recursion depth) | `O(n)` (auxiliary array) |  
+| Fibonacci | `O(n)` (due to recursion depth) | `O(1)` (loop-based) |  
+| DFS | `O(h)`, where `h` is tree/graph depth | `O(n)` (if stack used explicitly) |  
+| BFS | `O(n)` (queue storage) | `O(n)` (queue storage) |  
+
+---
+## **How Recursion Impacts Space Usage with Stack Frames**  
+
+### **What Happens in Memory During Recursion?**  
+When a function calls itself recursively, the system **allocates memory** on the **call stack** for each function call. These stack frames store:  
+- **Function parameters**  
+- **Local variables**  
+- **Return address (where to continue execution after returning)**  
+
+Each recursive call **adds a new stack frame**, and these frames remain in memory until the function returns. If recursion is too deep, it can cause **stack overflow**.
+
+---
+
+### **Example: Recursive Fibonacci Calculation**
+Let's take a simple recursive Fibonacci function:
+```python
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+```
+- **Function Calls for `fibonacci(4)`:**  
+```
+fibonacci(4)  
+├── fibonacci(3)  
+│   ├── fibonacci(2)  
+│   │   ├── fibonacci(1) → returns 1  
+│   │   ├── fibonacci(0) → returns 0  
+│   ├── fibonacci(1) → returns 1  
+├── fibonacci(2)  
+│   ├── fibonacci(1) → returns 1  
+│   ├── fibonacci(0) → returns 0  
+```
+- **Stack Frame Growth (Call Stack):**
+```
+fibonacci(4)
+  fibonacci(3)
+    fibonacci(2)
+      fibonacci(1)  (returns)
+      fibonacci(0)  (returns)
+    fibonacci(1)  (returns)
+  fibonacci(2)
+    fibonacci(1)  (returns)
+    fibonacci(0)  (returns)
+```
+- **Space Complexity:** `O(n)` (for call stack depth).  
+- **Problem:** Many redundant calls (`fibonacci(2)` appears twice).  
+
+---
+
+### **Recursion vs. Iteration: Call Stack Usage**  
+| Approach | Space Complexity | Why? |
+|----------|----------------|------|
+| **Recursive Fibonacci** | `O(n)` | Each call adds a stack frame until `n` reaches 0. |
+| **Iterative Fibonacci** | `O(1)` | Uses only a few variables, no extra function calls. |
+
+---
+
+
