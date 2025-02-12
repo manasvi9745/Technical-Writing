@@ -4,18 +4,34 @@ This document lists various algorithms and their time/space complexities. Some c
 
 1. Linear Search
 Description: Sequentially checks each element in a list until a match is found or the end of list is reached.
-Time Complexity: 
-Space Complexity:
+- Best case: O(1) (element found at the start).
+- Worst case: O(n) (element found at the end or not found).
+- Recursive space complexity: O(n) due to function call stack.
+
 
 2. Binary Search
 Description: Repeatedly divides a sorted array in half, eliminating the half that cannot contain the target value.
-Time Complexity: 
-Space Complexity:
+- Best case: O(1) (middle element is the target).
+- Worst case: O(log n) (keep dividing search space).
+- Recursive space complexity: O(log n) (recursion stack depth).
 
 3. Bubble Sort
 Description: Repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
-Time Complexity: 
-Space Complexity:
+- Best case: O(n) (already sorted array).
+- Worst case: O(n²) (comparing every pair).
+- Recursive space complexity: O(n) (function calls).
+
+**Table explaning the complexitites**
+
+| Algorithm     | Approach   | Best Case Time | Average Case Time | Worst Case Time | Space Complexity |
+|--------------|-----------|----------------|--------------------|-----------------|------------------|
+| **Linear Search** | Iterative  | O(1)          | O(n)              | O(n)            | O(1)             |
+|              | Recursive  | O(1)          | O(n)              | O(n)            | O(n) (due to recursion stack) |
+| **Binary Search** | Iterative  | O(1)          | O(log n)          | O(log n)        | O(1)             |
+|              | Recursive  | O(1)          | O(log n)          | O(log n)        | O(log n) (due to recursion stack) |
+| **Bubble Sort** | Iterative  | O(n)          | O(n²)             | O(n²)           | O(1)             |
+|               | Recursive  | O(n)          | O(n²)             | O(n²)           | O(n) (due to recursion stack) |
+
 
 
 4. Selection Sort
