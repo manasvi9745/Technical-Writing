@@ -48,14 +48,66 @@ Space Complexity:
 
 6. Merge Sort
 Description: Divides the array into two halves, recursively sorts them, and then merges the sorted halves.
-Time Complexity: 
-Space Complexity:
 
+**Working Principle**
+- Divide: The array is recursively divided into two halves until each subarray has one element.
+- Conquer: The subarrays are sorted recursively.
+- Combine: The sorted subarrays are merged to form the final sorted array.
+
+Time Complexity: 
+
+| Case| Complexity |
+|-----|------------|
+| Best Case| O(n log n) |
+| Average Case | O(n log n) |
+| Worst Case | O(n log n) |
+
+Since the array is divided into two halves at each step and merging takes O(n) time, the total time complexity is O(n log n).
+
+Space Complexity:
+- Merge Sort requires O(n) auxiliary space due to the temporary arrays used for merging.
+-  The recursive calls contribute to an additional O(log n) space complexity for the function call stack.
 
 7. Quick Sort
 Description: Selects a 'pivot' element and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot.
+
+**Working Principle**
+- Divide: A pivot element is chosen, and the array is partitioned such that elements smaller than the pivot are placed on the left and larger elements on the right.
+- Conquer: Quick Sort is recursively applied to the left and right partitions.
+- Combine: The sorted partitions are combined (implicitly achieved through recursion).
+
 Time Complexity: 
+
+| Case | Complexity |
+|-----|------------|
+| Best Case | O(n log n) |
+|Average Case | O(n log n) |
+| Worst Case | O(n^2) |
+
+- The worst-case occurs when the pivot consistently picks the smallest or largest element, leading to unbalanced partitions.
+- Choosing an optimal pivot (e.g., median of three) improves efficiency.
+
 Space Complexity:
+- In-place sorting: Quick Sort generally requires O(log n) space for recursive function calls.
+- In the worst case, the recursive depth may be O(n) (if partitions are highly unbalanced).
+- No additional auxiliary arrays are needed, unlike Merge Sort.
+
+Merge Sort and Quick Sort are two classic examples of **Divide and Conquer** algorithms used for sorting. Divide and Conquer is a fundamental algorithm design paradigm that breaks a problem into smaller subproblems, solves them independently, and then combines their solutions to solve the original problem. 
+
+**Comparison Table**
+
+| Feature | Merge Sort | Quick Sort |
+|---------|------------|------------|
+| Time Complexity (Best/Average) | O(n log n) | O(n log n) | 
+| Time Complexity (Worst) | O(n log n) | O(n^2) |
+| Space Complexity | O(n) | O(log n) |
+| Stability | Stable | Unstable (in some implementations) |
+| In-Place Sorting | No | Yes |
+
+**Conclusion**
+- Merge Sort is more suitable for linked lists and cases where stable sorting is required, despite its higher space complexity.
+- Quick Sort is preferred for in-place sorting and average-case efficiency, but worst-case performance can be poor without an optimal pivot selection strategy.
+- Both algorithms have their own strengths and are widely used in different applications depending on the requirements of stability, space constraints, and performance.
 
 
 8. Breadth-First Search (BFS)
@@ -99,39 +151,69 @@ Space Complexity: O(nW)
 
 
 13. Fibonacci Sequence (Recursive)
-Description: Calculates the nth Fibonacci number using recursive calls.
-Time Complexity: 
-Space Complexity:
+
+**Description:** Calculates the nth Fibonacci number using recursive calls. This results in Recurrence relation:
+- F(n)=F(n-1) + F(n-2)
+
+**Time Complexity:** O(2^n)
+- Each Fibonacci number is calculated using 2 recursive calls.
+- This creates an exponential number of function calls.
+- The recurrence tree has a depth of n and at each level, the number of calls doubles, leading to exponential time complexity.
+  
+```java
+public static int fib(int n) {
+		if(n==0) {
+			return 0;
+		}
+		
+		if(n==1) {
+			return 1;
+		}
+		
+		return fib(n-1)+fib(n-2);
+  }
+```
+
+**Space Complexity:** O(n)
+- The recursion stack has a depth of n as the function calls reach to the base case.
+- An example representation:
+  ![Image](https://github.com/user-attachments/assets/107309a2-4d7e-4f92-8788-5936cccd1dda)
 
 
 14. Fibonacci Sequence (Dynamic Programming)
-Description: Calculates the nth Fibonacci number using a bottom-up approach with memoization.
-Time Complexity: 
-Space Complexity:
+
+    
+**Description:** Calculates the nth Fibonacci number using a bottom-up approach with memoization.
+
+**Time Complexity:** O(n) 
+- Each Fibonacci number is calculated only once and stored in memory for re-use to avoid redundant calculations.
+  
+**Space Complexity:**O(n)
+- An array of size n+1 (since 0 based indexing) used to store the values.
+
+```java
+public static int fib_memo(int n) {
+		int memo[]=new int[n+1];
+		memo[0]=0;
+		memo[1]=1;
+		
+		if(n==0 || n==1) {
+			return n;
+		}
+		
+		for(int i=2;i<memo.length;i++) {
+			memo[i]=memo[i-1]+memo[i-2];
+		}
+		
+		return memo[n];
+}
+```
 
 
 15. Matrix Multiplication (Naive)
-Description: Naïve Matrix Multiplication follows the standard row-column method to multiply two matrices. 
-** Time Complexity: **
-- Best-case Complexity: O(mnp)
-- Worst-case Complexity: O(mnp)
-
-Since each element requires n multiplications and additions, the complexity remains O(mnp) in all cases.
-
-** Space Complexity: **
-- The space required to store the resulting matrix C is O(mp).
-
-If auxiliary storage is considered, additional space is minimal, so the space complexity remains O(mp).
-
-** Applications **
-- Computer graphics transformations
-- Scientific computing
-- Machine learning and deep learning computations
-- Engineering simulations
-
-** Limitations **
-1. Inefficiency: The naive approach is slow for large matrices due to its O(mnp) complexity.
-2. Better Alternatives: Strassen’s Algorithm (O(n^{2.81})) and more optimized methods like the Coppersmith-Winograd Algorithm are used for faster computations.
+Description: Multiplies two matrices using the standard row-column multiplication method.
+Time Complexity: 
+Space Complexity:
 
 
 Note: For each algorithm, consider:
