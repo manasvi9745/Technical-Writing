@@ -70,6 +70,29 @@ Client → Server: SYN (ISN=1000)
 Server → Client: SYN-ACK (ISN=5000, ACK=1001)
 Client → Server: ACK (ACK=5001)
 
+<!-- **TODO:** Complete the three-way handshake-->
+### Three-Way Handshake Process
+
+The three-way handshake is a process that establishes a reliable connection between the client and server before the data transmission in three steps:
+
+**1. SYN (Synchronize)**
+- The client sends a **SYN** (synchronize) packet to the server.
+- This packet contains an initial sequence number.
+- It indicates that the client wants to establish a connection and synchronize sequence numbers.
+
+**2. SYN-ACK (Synchronize-Acknowledgment)**
+- The server receives the SYN packet and responds with a **SYN-ACK** packet.
+- Two purposes are served via the SYN-ACK packet:
+  - It acknowledges the client's SYN request.
+  - It also includes the server's own initial sequence number to synchronize communication.
+
+**3. ACK (Acknowledgment)**
+- The client receives the SYN-ACK packet and responds with an **ACK** packet.
+- This ACK packet acknowledges the server's sequence number.
+- Once the server receives this ACK, the TCP connection is established, and data transfer can begin.
+  
+![Image](https://github.com/user-attachments/assets/fc0d308f-6a00-46a5-acdd-7cad310ec442)
+
 
 TCP Window Sizing and Flow Control:
 TCP uses window sizing to manage how much data can be sent before receiving an acknowledgment, preventing network congestion and overwhelming the receiver.
