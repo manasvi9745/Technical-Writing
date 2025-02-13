@@ -11,11 +11,71 @@ When you type a URL in your browser and press Enter, a fascinating journey begin
 **TODO:** Add explanation of DNS cache hierarchy and time complexity of DNS lookups
 
 ## 2. Establishing TCP Connection
-- The browser initiates a TCP connection with the server
-- This happens through the famous three-way handshake:
-  - **TODO:**Complete the three-way handshake
+Establishing TCP Connection
+When a browser initiates communication with a web server, it establishes a TCP (Transmission Control Protocol) connection to ensure reliable, ordered data transmission. This process consists of several key steps.
 
-**TODO:** Add details about TCP window sizing and congestion control algorithms
+TCP Three-Way Handshake
+The connection setup follows a three-way handshake, ensuring both client and server synchronize before data transmission begins:
+
+1.SYN (Synchronize)
+The client sends a SYN packet to the server, requesting a connection.
+The packet includes an Initial Sequence Number (ISN) to track transmitted data.
+
+2.SYN-ACK (Synchronize-Acknowledge)
+The server responds with a SYN-ACK packet, acknowledging the client's request.
+It also sends its own ISN to synchronize communication.
+
+3.ACK (Acknowledge)
+The client responds with an ACK packet, confirming the connection is established.
+Data transfer begins.
+
+Example of Three-Way Handshake:
+Client → Server: SYN (ISN=1000)
+Server → Client: SYN-ACK (ISN=5000, ACK=1001)
+Client → Server: ACK (ACK=5001)
+
+
+TCP Window Sizing and Flow Control:
+TCP uses window sizing to manage how much data can be sent before receiving an acknowledgment, preventing network congestion and overwhelming the receiver.
+
+1. TCP Sliding Window Mechanism
+Each sender and receiver maintain a window size, indicating how much unacknowledged data can be in transit.
+The receiver advertises a window size (Receiver Window, rwnd) to inform the sender of its available buffer space.
+The sender adjusts the amount of data sent to avoid overwhelming the receiver.
+2. Bandwidth-Delay Product (BDP)
+The ideal window size is calculated based on network bandwidth and Round-Trip Time (RTT):
+𝐵𝐷𝑃 = Bandwidth × RTT
+
+A properly tuned window size improves throughput by maximizing link utilization.
+
+
+Congestion Control Algorithms :
+TCP congestion control mechanisms help prevent excessive packet loss and network congestion. The most widely used algorithm is AIMD (Additive Increase Multiplicative Decrease), which dynamically adjusts the transmission rate based on network conditions.
+
+1. Additive Increase Phase (AI)
+When no congestion is detected, TCP gradually increases the congestion window (cwnd) to maximize throughput.
+The increase is linear, meaning TCP adds 1 Maximum Segment Size (MSS) per RTT.
+
+2. Multiplicative Decrease Phase (MD)
+When packet loss occurs (indicating congestion), TCP halves the congestion window (cwnd) to quickly reduce network load.
+This exponential reduction helps prevent congestion collapse.
+
+3. Phases of Congestion Control
+Slow Start:
+TCP starts with a small cwnd and increases it exponentially to quickly probe available bandwidth.
+Congestion Avoidance:
+Once a threshold is reached, growth shifts to linear (Additive Increase) to prevent network overload.
+Fast Retransmit & Fast Recovery:
+If 3 duplicate ACKs are received, TCP retransmits lost packets without waiting for a timeout.
+
+
+How These Mechanisms Manage Data Flow & Congestion :
+1.Prevents buffer overflow: The receiver’s advertised window (rwnd) ensures that the sender does not overwhelm it.
+2.Optimizes bandwidth usage: Sliding window and BDP tuning maximize throughput efficiency.
+3.Avoids congestion collapse: AIMD dynamically adjusts sending rates based on network conditions.
+4.Maintains fairness: Multiplicative decrease ensures all network users get a fair share of bandwidth.
+
+
 
 ## 3. TLS Handshake (for HTTPS)
 - After TCP connection, a secure channel needs to be established
