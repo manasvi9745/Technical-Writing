@@ -1,52 +1,17 @@
-# The Kingdom's Fencing Challenge
-
-## Problem Statement
-The king of a medieval kingdom wants to divide his land into plots using fences. Each plot must form a rectangle, and the goal is to find the maximum area that can be enclosed using the given number of fences.
-
----
-
-## Suggested Approaches
-1. Binary Search
-2. Greedy Algorithm
-3. Monotonic Stack
-
----
-
-## Example Input/Output
-### Input:
-- Fences: `8`
-- Land grid: `[[1, 1, 0], [1, 1, 1], [0, 1, 1]]`
-
-### Output:
-`4`
-
----
-
-## Your Task
-1. Solve the problem using all three approaches.
-2. Compare efficiency and trade-offs.
-3. Contribute your solutions and thoughts.
-
----
-
-## Discussion Points
-- Which approach is easiest to implement? Why?
-- What are the edge cases to consider?
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.*;
 
 public class KingdomFencing {
-
+    
     public static int maxAreaBinarySearch(int[][] grid, int fences) {
         int m = grid.length, n = grid[0].length;
         List<int[]> ones = new ArrayList<>();
-
+        
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
                 if (grid[r][c] == 1) ones.add(new int[]{r, c});
             }
         }
-
+        
         int lo = 1, hi = m * n, best = 0;
         while (lo <= hi) {
             int mid = (lo + hi) / 2;
@@ -76,7 +41,7 @@ public class KingdomFencing {
 
     public static int maxAreaGreedy(int[][] grid, int fences) {
         int m = grid.length, n = grid[0].length, maxArea = 0;
-
+        
         for (int r1 = 0; r1 < m; r1++) {
             for (int c1 = 0; c1 < n; c1++) {
                 if (grid[r1][c1] == 0) continue;
@@ -107,7 +72,7 @@ public class KingdomFencing {
         int m = grid.length, n = grid[0].length;
         int[] heights = new int[n];
         int maxArea = 0;
-
+        
         for (int[] row : grid) {
             for (int j = 0; j < n; j++) {
                 heights[j] = (row[j] == 1) ? heights[j] + 1 : 0;
@@ -121,7 +86,7 @@ public class KingdomFencing {
         Stack<Integer> stack = new Stack<>();
         int maxArea = 0, n = heights.length;
         int[] extendedHeights = Arrays.copyOf(heights, n + 1);
-
+        
         for (int i = 0; i <= n; i++) {
             while (!stack.isEmpty() && extendedHeights[stack.peek()] > extendedHeights[i]) {
                 int height = extendedHeights[stack.pop()];
@@ -160,6 +125,8 @@ public class KingdomFencing {
 ->Use binary search on the area values.
 ->For each mid-value in binary search, check if at least one rectangle of that area can be formed within the given fence limit.
 ->Adjust search space accordingly
+
+
  */
 
 
@@ -169,6 +136,7 @@ public class KingdomFencing {
 ->Iterate over all possible rectangles in the grid.
 ->Calculate the perimeter needed for each rectangle.
 ->Choose the largest area that fits within the fence limit.
+
  */
 
 /*
@@ -182,6 +150,7 @@ public class KingdomFencing {
 
  /*
   * Easiest Approach:
+
 Greedy is easiest to implement since it directly iterates over rectangles.
 ------------------------------------------------------------------------------------
 Edge Cases to Consider:
