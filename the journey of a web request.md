@@ -235,7 +235,62 @@ Example: `/search?query=term&category=books&page=1`
 - Downloads additional resources (CSS, JS, images)
 - Renders the page
 
-**TODO:** Add details about browser rendering pipeline and critical rendering path
+Browser Rendering Pipeline:
+Once the browser receives the response, it processes and renders the page in these key steps:
+
+1.Parsing HTML
+The browser converts HTML into a DOM (Document Object Model).
+HTML is processed in a tree structure where each element becomes a node.
+
+2.Building the CSSOM (CSS Object Model)
+CSS files are downloaded and parsed separately.
+The CSSOM tree is created to apply styles correctly.
+
+3.Render Tree Construction
+The DOM and CSSOM trees are combined to form the Render Tree.
+This tree only contains elements that need to be displayed (hidden elements like <display: none> are excluded).
+
+4.Layout (Reflow)
+The browser calculates the exact position and size of elements based on styles and viewport size.
+Elements are arranged as per CSS rules like position, flex, grid, etc.
+
+5.Painting
+The browser converts pixels into visual elements by applying colors, backgrounds, shadows, and text.
+
+6.Compositing
+The browser optimizes the rendering by breaking the page into layers and combining them efficiently to minimize repainting
+
+How the Browser Decides What to Render First:
+To ensure a fast and smooth experience, the browser prioritizes:
+
+1.Above-the-Fold Content → Elements visible without scrolling are rendered first.
+2.Critical Resources → HTML and CSS are parsed early, while JavaScript execution is deferred if marked with async or defer.
+3.Efficient Layering → Complex elements (e.g., animations) are placed in GPU-accelerated layers for smooth rendering.
+
+Critical Rendering Path (CRP):
+The Critical Rendering Path (CRP) is the sequence of steps the browser follows to render the first meaningful paint of a webpage. Optimizing it improves performance and load times.
+
+Steps in the Critical Rendering Path:
+1.HTML Parsing & DOM Creation → The browser parses HTML to construct the DOM.
+2.CSS Parsing & CSSOM Creation → CSS is parsed separately into the CSSOM.
+3.JavaScript Execution → Scripts may modify the DOM or CSSOM, affecting rendering.
+4.Render Tree Construction → The DOM + CSSOM merge, excluding display: none elements.
+5.Layout (Reflow) → The browser calculates positions and dimensions of elements.
+6.Painting & Compositing → The page is drawn and layered for rendering efficiency.
+
+Why CRP Matters?
+A well-optimized CRP ensures:
+ Faster page load times 
+ Better user experience 
+ Lower resource consumption 
+
+
+
+
+
+
+
+
 
 ## Common Optimization Techniques
 - Content Delivery Networks (CDNs)
